@@ -22,7 +22,7 @@ function menxa
 %                   5     .30897289D-05
 %       =========================================================
 n=[];x=[];en=[];
- en=zeros(1,100+1);
+en=zeros(1,100+1);
 fprintf(1,'%s \n','please enter n and x ');
 %        READ(*,*)N,X
 n=5;
@@ -33,7 +33,7 @@ fprintf(1,'%s \n','   n         en(x)');
 fprintf(1,'%s \n',' ----------------------');
 [n,x,en]=enxa(n,x,en);
 for  k=0:n;
-fprintf(1,[repmat(' ',1,2),'%3g','%18.8g' ' \n'],k,en(k+1));
+    fprintf(1,[repmat(' ',1,2),'%3g','%18.8g' ' \n'],k,en(k+1));
 end;  k=n+1;
 %format(5x,i3,',   ',',f5.1);
 %format(2x,i3,d18.8);
@@ -51,9 +51,9 @@ en(0+1)=exp(-x)./x;
 [x,e1]=e1xb(x,e1);
 en(1+1)=e1;
 for  k=2:n;
-ek=(exp(-x)-x.*e1)./(k-1.0d0);
-en(k+1)=ek;
-e1=ek;
+    ek=(exp(-x)-x.*e1)./(k-1.0d0);
+    en(k+1)=ek;
+    e1=ek;
 end;  k=fix(n)+1;
 return;
 end
@@ -64,26 +64,25 @@ function [x,e1]=e1xb(x,e1,varargin);
 %       Output:  E1 --- E1(x)
 %       ============================================
 if(x == 0.0);
-e1=1.0d+300;
+    e1=1.0d+300;
 elseif(x <= 1.0);
-e1=1.0d0;
-r=1.0d0;
-for  k=1:25;
-r=-r.*k.*x./(k+1.0d0).^2;
-e1=e1+r;
-if(abs(r)<= abs(e1).*1.0d-15)break; end;
-end;
-ga=0.5772156649015328d0;
-e1=-ga-log(x)+x.*e1;
+    e1=1.0d0;
+    r=1.0d0;
+    for  k=1:25;
+        r=-r.*k.*x./(k+1.0d0).^2;
+        e1=e1+r;
+        if(abs(r)<= abs(e1).*1.0d-15)break; end;
+    end;
+    ga=0.5772156649015328d0;
+    e1=-ga-log(x)+x.*e1;
 else;
-m=20+fix(80.0./x);
-t0=0.0d0;
-for  k=m:-1:1;
-t0=k./(1.0d0+k./(x+t0));
-end;  k=1-1;
-t=1.0d0./(x+t0);
-e1=exp(-x).*t;
+    m=20+fix(80.0./x);
+    t0=0.0d0;
+    for  k=m:-1:1;
+        t0=k./(1.0d0+k./(x+t0));
+    end;  k=1-1;
+    t=1.0d0./(x+t0);
+    e1=exp(-x).*t;
 end;
 return;
 end
-

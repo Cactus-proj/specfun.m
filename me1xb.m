@@ -24,8 +24,8 @@ function me1xb
 %                 5.0     .1148295591E-02
 %       =========================================================
 x=[];e1=[];
-  e1=0;
- x=0;
+e1=0;
+x=0;
 fprintf(1,'%s \n','please enter x ');
 %        READ(*,*)X
 x=5.0;
@@ -42,26 +42,25 @@ function [x,e1]=e1xb(x,e1,varargin);
 %       Output:  E1 --- E1(x,x > 0)
 %       ============================================
 if(x == 0.0);
-e1=1.0d+300;
+  e1=1.0d+300;
 elseif(x <= 1.0);
-e1=1.0d0;
-r=1.0d0;
-for  k=1:25;
-r=-r.*k.*x./(k+1.0d0).^2;
-e1=e1+r;
-if(abs(r)<= abs(e1).*1.0d-15)break; end;
-end;
-ga=0.5772156649015328d0;
-e1=-ga-log(x)+x.*e1;
+  e1=1.0d0;
+  r=1.0d0;
+  for  k=1:25;
+    r=-r.*k.*x./(k+1.0d0).^2;
+    e1=e1+r;
+    if(abs(r)<= abs(e1).*1.0d-15)break; end;
+  end;
+  ga=0.5772156649015328d0;
+  e1=-ga-log(x)+x.*e1;
 else;
-m=20+fix(80.0./x);
-t0=0.0d0;
-for  k=m:-1:1;
-t0=k./(1.0d0+k./(x+t0));
-end;  k=1-1;
-t=1.0d0./(x+t0);
-e1=exp(-x).*t;
+  m=20+fix(80.0./x);
+  t0=0.0d0;
+  for  k=m:-1:1;
+    t0=k./(1.0d0+k./(x+t0));
+  end;  k=1-1;
+  t=1.0d0./(x+t0);
+  e1=exp(-x).*t;
 end;
 return;
 end
-

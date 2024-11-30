@@ -26,10 +26,10 @@ function mlqna
 %                 5      .55508089     1.08422720
 %       ======================================================
 n=[];x=[];qn=[];qd=[];
-  qn=0;
- qd=0;
- x=0;
- qn=zeros(1,100+1);
+qn=0;
+qd=0;
+x=0;
+qn=zeros(1,100+1);
 qd=zeros(1,100+1);
 fprintf(1,'%s \n','  please enter nmax and x');
 %        READ(*,*)N,X
@@ -41,7 +41,7 @@ fprintf(1,'%0.15g \n');
 fprintf(1,'%s \n','  n        qn(x)qn''(x)');
 fprintf(1,'%s \n',' ---------------------------------');
 for  k=0:n;
-fprintf(1,[repmat(' ',1,1),'%3g',repmat('%15.8g',1,2) ' \n'],k,qn(k+1),qd(k+1));
+  fprintf(1,[repmat(' ',1,1),'%3g',repmat('%15.8g',1,2) ' \n'],k,qn(k+1),qd(k+1));
 end;  k=n+1;
 %format(1x,i3,2f15.8);
 %format(3x,',f5.2);
@@ -56,25 +56,24 @@ function [n,x,qn,qd]=lqna(n,x,qn,qd,varargin);
 %(1.0D+300 stands for infinity)
 %       =====================================================
 if(abs(x)== 1.0d0);
-for  k=0:n;
-qn(k+1)=1.0d+300;
-qd(k+1)=-1.0d+300;
-end;  k=fix(n)+1;
+  for  k=0:n;
+    qn(k+1)=1.0d+300;
+    qd(k+1)=-1.0d+300;
+  end;  k=fix(n)+1;
 elseif(abs(x)< 1.0d0);
-q0=0.5d0.*log((1.0d0+x)./(1.0d0-x));
-q1=x.*q0-1.0d0;
-qn(0+1)=q0;
-qn(1+1)=q1;
-qd(0+1)=1.0d0./(1.0d0-x.*x);
-qd(1+1)=qn(0+1)+x.*qd(0+1);
-for  k=2:n;
-qf=((2.*k-1).*x.*q1-(k-1).*q0)./k;
-qn(k+1)=qf;
-qd(k+1)=(qn(k-1+1)-x.*qf).*k./(1.0d0-x.*x);
-q0=q1;
-q1=qf;
-end;  k=fix(n)+1;
+  q0=0.5d0.*log((1.0d0+x)./(1.0d0-x));
+  q1=x.*q0-1.0d0;
+  qn(0+1)=q0;
+  qn(1+1)=q1;
+  qd(0+1)=1.0d0./(1.0d0-x.*x);
+  qd(1+1)=qn(0+1)+x.*qd(0+1);
+  for  k=2:n;
+    qf=((2.*k-1).*x.*q1-(k-1).*q0)./k;
+    qn(k+1)=qf;
+    qd(k+1)=(qn(k-1+1)-x.*qf).*k./(1.0d0-x.*x);
+    q0=q1;
+    q1=qf;
+  end;  k=fix(n)+1;
 end;
 return;
 end
-

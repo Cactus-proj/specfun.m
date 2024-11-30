@@ -27,10 +27,10 @@ function mlpn
 %                  5        .08984375      -2.22656250
 %       ========================================================
 n=[];x=[];pn=[];pd=[];
-  pn=0;
- pd=0;
- x=0;
- pn=zeros(1,100+1);
+pn=0;
+pd=0;
+x=0;
+pn=zeros(1,100+1);
 pd=zeros(1,100+1);
 fprintf(1,'%s \n','  please enter nmax and x ');
 %        READ(*,*)N,X
@@ -42,7 +42,7 @@ fprintf(1,'%0.15g \n');
 fprintf(1,'%s \n','  n         pn(x)pn''(x)');
 fprintf(1,'%s \n','---------------------------------------');
 for  k=0:n;
-fprintf(1,[repmat(' ',1,1),'%3g',repmat('%17.8g',1,2) ' \n'],k,pn(k+1),pd(k+1));
+  fprintf(1,[repmat(' ',1,1),'%3g',repmat('%17.8g',1,2) ' \n'],k,pn(k+1),pd(k+1));
 end;  k=n+1;
 %format(1x,i3,2e17.8);
 %format(3x,',f5.1);
@@ -63,16 +63,15 @@ pd(1+1)=1.0d0;
 p0=1.0d0;
 p1=x;
 for  k=2:n;
-pf=(2.0d0.*k-1.0d0)./k.*x.*p1-(k-1.0d0)./k.*p0;
-pn(k+1)=pf;
-if(abs(x)== 1.0d0);
-pd(k+1)=0.5d0.*x.^(k+1).*k.*(k+1.0d0);
-else;
-pd(k+1)=k.*(p1-x.*pf)./(1.0d0-x.*x);
-end;
-p0=p1;
-p1=pf;
+  pf=(2.0d0.*k-1.0d0)./k.*x.*p1-(k-1.0d0)./k.*p0;
+  pn(k+1)=pf;
+  if(abs(x)== 1.0d0);
+    pd(k+1)=0.5d0.*x.^(k+1).*k.*(k+1.0d0);
+  else;
+    pd(k+1)=k.*(p1-x.*pf)./(1.0d0-x.*x);
+  end;
+  p0=p1;
+  p1=pf;
 end;  k=fix(n)+1;
 return;
 end
-

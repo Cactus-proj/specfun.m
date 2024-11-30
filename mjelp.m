@@ -50,25 +50,25 @@ function [u,hk,esn,ecn,edn,eph]=jelp(u,hk,esn,ecn,edn,eph,varargin);
 %                EDN --- dn u
 %                EPH --- phi(in degrees)
 %       ========================================================
- r=zeros(1,40);
+r=zeros(1,40);
 pi=3.14159265358979d0;
 a0=1.0d0;
 b0=sqrt(1.0d0-hk.*hk);
 for  n=1:40;
-a=(a0+b0)./2.0d0;
-b=sqrt(a0.*b0);
-c=(a0-b0)./2.0d0;
-r(n)=c./a;
-if(c < 1.0d-7)break; end;
-a0=a;
-b0=b;
+    a=(a0+b0)./2.0d0;
+    b=sqrt(a0.*b0);
+    c=(a0-b0)./2.0d0;
+    r(n)=c./a;
+    if(c < 1.0d-7)break; end;
+    a0=a;
+    b0=b;
 end;
 dn=2.0d0.^n.*a.*u;
 for  j=n:-1:1;
-t=r(j).*sin(dn);
-sa=atan(t./sqrt(abs(1.0d0-t.*t)));
-d=.5d0.*(dn+sa);
-dn=d;
+    t=r(j).*sin(dn);
+    sa=atan(t./sqrt(abs(1.0d0-t.*t)));
+    d=.5d0.*(dn+sa);
+    dn=d;
 end;  j=1-1;
 eph=d.*180.0d0./pi;
 esn=sin(d);
@@ -76,4 +76,3 @@ ecn=cos(d);
 edn=sqrt(1.0d0-hk.*hk.*esn.*esn);
 return;
 end
-

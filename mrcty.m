@@ -27,7 +27,7 @@ function mrcty
 %                  5     .9383354168D+00    -.4857670106D+00
 %       =======================================================
 n=[];x=[];nm=[];ry=[];dy=[];
- ry=zeros(1,250+1);
+ry=zeros(1,250+1);
 dy=zeros(1,250+1);
 fprintf(1,'%s \n','  please enter n and x ');
 %        READ(*,*)N,X
@@ -35,11 +35,11 @@ n=5;
 x=10.0;
 fprintf(1,[repmat(' ',1,3),'nmax =','%3g',',    ','x =','%6.2g' ' \n'],n,x);
 if(n <= 10);
-ns=1;
+    ns=1;
 else;
-fprintf(1,'%s \n','  please enter order step ns');
-%           READ(*,*)NS
-ns=1;
+    fprintf(1,'%s \n','  please enter order step ns');
+    %           READ(*,*)NS
+    ns=1;
 end;
 fprintf(1,'%0.15g \n');
 [n,x,nm,ry,dy]=rcty(n,x,nm,ry,dy);
@@ -47,7 +47,7 @@ fprintf(1,'%0.15g \n');
 fprintf(1,'%s \n','  n        x·yn(x)[x·yn(x)]''');
 fprintf(1,'%s \n','--------------------------------------------');
 for  k=0:ns:nm;
-fprintf(1,[repmat(' ',1,1),'%3g',repmat('%20.10g',1,2) ' \n'],k,ry(k+1),dy(k+1));
+    fprintf(1,[repmat(' ',1,1),'%3g',repmat('%20.10g',1,2) ' \n'],k,ry(k+1),dy(k+1));
 end;  k=nm+1;
 %format(1x,i3,2d20.10);
 %format(3x,,i3,',    ',,f6.2);
@@ -64,30 +64,29 @@ function [n,x,nm,ry,dy]=rcty(n,x,nm,ry,dy,varargin);
 %       ========================================================
 nm=fix(fix(n));
 if(x < 1.0d-60);
-for  k=0:n;
-ry(k+1)=-1.0d+300;
-dy(k+1)=1.0d+300;
-end;  k=fix(n)+1;
-ry(0+1)=-1.0d0;
-dy(0+1)=0.0d0;
-return;
+    for  k=0:n;
+        ry(k+1)=-1.0d+300;
+        dy(k+1)=1.0d+300;
+    end;  k=fix(n)+1;
+    ry(0+1)=-1.0d0;
+    dy(0+1)=0.0d0;
+    return;
 end;
 ry(0+1)=-cos(x);
 ry(1+1)=ry(0+1)./x-sin(x);
 rf0=ry(0+1);
 rf1=ry(1+1);
 for  k=2:n;
-rf2=(2.0d0.*k-1.0d0).*rf1./x-rf0;
-if(abs(rf2)> 1.0d+300)break; end;
-ry(k+1)=rf2;
-rf0=rf1;
-rf1=rf2;
+    rf2=(2.0d0.*k-1.0d0).*rf1./x-rf0;
+    if(abs(rf2)> 1.0d+300)break; end;
+    ry(k+1)=rf2;
+    rf0=rf1;
+    rf1=rf2;
 end;
 nm=fix(k-1);
 dy(0+1)=sin(x);
 for  k=1:nm;
-dy(k+1)=-k.*ry(k+1)./x+ry(k-1+1);
+    dy(k+1)=-k.*ry(k+1)./x+ry(k-1+1);
 end;  k=fix(nm)+1;
 return;
 end
-

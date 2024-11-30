@@ -36,7 +36,7 @@ function mlpmn
 %           4      .000000      .000000      .000000  -157.500000
 %       ==========================================================
 m=[];n=[];x=[];pm=[];pd=[];
- pm=zeros(100+1,100+1);
+pm=zeros(100+1,100+1);
 pd=zeros(100+1,100+1);
 fprintf(1,'%s \n','  please enter m, n and x');
 %        READ(*,*)M,N,X
@@ -48,7 +48,7 @@ fprintf(1,'%s \n','  m     n      x          pmn(x)pmn''(x)');
 fprintf(1,'%s \n',' ---------------------------------------------------');
 [dumvar1,m,n,x,pm,pd]=lpmn(100,m,n,x,pm,pd);
 for  j=0:n;
-fprintf(1,[repmat(' ',1,1),'%3g',repmat(' ',1,3),'%3g',repmat(' ',1,3),'%5.1g',repmat('%17.8g',1,2) ' \n'],m,j,x,pm(m+1,j+1),pd(m+1,j+1));
+    fprintf(1,[repmat(' ',1,1),'%3g',repmat(' ',1,3),'%3g',repmat(' ',1,3),'%5.1g',repmat('%17.8g',1,2) ' \n'],m,j,x,pm(m+1,j+1),pd(m+1,j+1));
 end;  j=n+1;
 %format(1x,i3,3x,i3,3x,f5.1,2e17.8);
 end
@@ -64,52 +64,51 @@ function [mm,m,n,x,pm,pd]=lpmn(mm,m,n,x,pm,pd,varargin);
 %                PD(m,n)--- Pmn'(x)
 %       =====================================================
 for  i=0:n;
-for  j=0:m;
-pm(j+1,i+1)=0.0d0;
-pd(j+1,i+1)=0.0d0;
-end;  j=fix(m)+1;
+    for  j=0:m;
+        pm(j+1,i+1)=0.0d0;
+        pd(j+1,i+1)=0.0d0;
+    end;  j=fix(m)+1;
 end;  i=fix(n)+1;
 pm(0+1,0+1)=1.0d0;
 if(abs(x)== 1.0d0);
-for  i=1:n;
-pm(0+1,i+1)=x.^i;
-pd(0+1,i+1)=0.5d0.*i.*(i+1.0d0).*x.^(i+1);
-end;  i=fix(n)+1;
-for  j=1:n;
-for  i=1:m;
-if(i == 1);
-pd(i+1,j+1)=1.0d+300;
-elseif(i == 2);
-pd(i+1,j+1)=-0.25d0.*(j+2).*(j+1).*j.*(j-1).*x.^(j+1);
-end;
-end;  i=fix(m)+1;
-end;  j=fix(n)+1;
-return;
+    for  i=1:n;
+        pm(0+1,i+1)=x.^i;
+        pd(0+1,i+1)=0.5d0.*i.*(i+1.0d0).*x.^(i+1);
+    end;  i=fix(n)+1;
+    for  j=1:n;
+        for  i=1:m;
+            if(i == 1);
+                pd(i+1,j+1)=1.0d+300;
+            elseif(i == 2);
+                pd(i+1,j+1)=-0.25d0.*(j+2).*(j+1).*j.*(j-1).*x.^(j+1);
+            end;
+        end;  i=fix(m)+1;
+    end;  j=fix(n)+1;
+    return;
 end;
 ls=1;
 if(abs(x)> 1.0d0)ls=-1; end;
 xq=sqrt(ls.*(1.0d0-x.*x));
 xs=ls.*(1.0d0-x.*x);
 for  i=1:m;
-pm(i+1,i+1)=-ls.*(2.0d0.*i-1.0d0).*xq.*pm(i-1+1,i-1+1);
+    pm(i+1,i+1)=-ls.*(2.0d0.*i-1.0d0).*xq.*pm(i-1+1,i-1+1);
 end;  i=fix(m)+1;
 for  i=0:m;
-pm(i+1,i+1+1)=(2.0d0.*i+1.0d0).*x.*pm(i+1,i+1);
+    pm(i+1,i+1+1)=(2.0d0.*i+1.0d0).*x.*pm(i+1,i+1);
 end;  i=fix(m)+1;
 for  i=0:m;
-for  j=i+2:n;
-pm(i+1,j+1)=((2.0d0.*j-1.0d0).*x.*pm(i+1,j-1+1)-(i+j-1.0d0).*pm(i+1,j-2+1))./(j-i);
-end;  j=fix(n)+1;
+    for  j=i+2:n;
+        pm(i+1,j+1)=((2.0d0.*j-1.0d0).*x.*pm(i+1,j-1+1)-(i+j-1.0d0).*pm(i+1,j-2+1))./(j-i);
+    end;  j=fix(n)+1;
 end;  i=fix(m)+1;
 pd(0+1,0+1)=0.0d0;
 for  j=1:n;
-pd(0+1,j+1)=ls.*j.*(pm(0+1,j-1+1)-x.*pm(0+1,j+1))./xs;
+    pd(0+1,j+1)=ls.*j.*(pm(0+1,j-1+1)-x.*pm(0+1,j+1))./xs;
 end;  j=fix(n)+1;
 for  i=1:m;
-for  j=i:n;
-pd(i+1,j+1)=ls.*i.*x.*pm(i+1,j+1)./xs+(j+i).*(j-i+1.0d0)./xq.*pm(i-1+1,j+1);
-end;  j=fix(n)+1;
+    for  j=i:n;
+        pd(i+1,j+1)=ls.*i.*x.*pm(i+1,j+1)./xs+(j+i).*(j-i+1.0d0)./xq.*pm(i-1+1,j+1);
+    end;  j=fix(n)+1;
 end;  i=fix(m)+1;
 return;
 end
-

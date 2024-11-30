@@ -24,8 +24,8 @@ function mbernob
 %                  10     .757575757576D-01
 %       ===========================================================
 n=[];b=[];
-  b=0;
- b=zeros(1,200+1);
+b=0;
+b=zeros(1,200+1);
 fprintf(1,'%s \n','  please enter nmax');
 %        READ(*,*)N
 n=10;
@@ -35,7 +35,7 @@ fprintf(1,'%s \n',' --------------------------');
 fprintf(1,[repmat(' ',1,2),'%3g','%22.12g' ' \n'],0,b(0+1));
 fprintf(1,[repmat(' ',1,2),'%3g','%22.12g' ' \n'],1,b(1+1));
 for  k=2:2:n;
-fprintf(1,[repmat(' ',1,2),'%3g','%22.12g' ' \n'],k,b(k+1));
+  fprintf(1,[repmat(' ',1,2),'%3g','%22.12g' ' \n'],k,b(k+1));
 end;  k=n+1;
 %format(2x,i3,d22.12);
 end
@@ -51,15 +51,14 @@ bn(1+1)=-0.5d0;
 bn(2+1)=1.0d0./6.0d0;
 r1=(2.0d0./tpi).^2;
 for  m=4:2:n;
-r1=-r1.*(m-1).*m./(tpi.*tpi);
-r2=1.0d0;
-for  k=2:10000;
-s=(1.0d0./k).^m;
-r2=r2+s;
-if(s < 1.0d-15)break; end;
-end;
-bn(m+1)=r1.*r2;
+  r1=-r1.*(m-1).*m./(tpi.*tpi);
+  r2=1.0d0;
+  for  k=2:10000;
+    s=(1.0d0./k).^m;
+    r2=r2+s;
+    if(s < 1.0d-15)break; end;
+  end;
+  bn(m+1)=r1.*r2;
 end;
 return;
 end
-

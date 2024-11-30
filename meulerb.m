@@ -23,8 +23,8 @@ function meulerb
 %                  10    -.505210000000D+05
 %       ==========================================================
 n=[];e=[];
-  e=0;
- e=zeros(1,200+1);
+e=0;
+e=zeros(1,200+1);
 fprintf(1,'%s \n','  please enter nmax ');
 %        READ(*,*)N
 n=10;
@@ -32,7 +32,7 @@ n=10;
 fprintf(1,'%s \n','   n            en');
 fprintf(1,'%s \n',' --------------------------');
 for  k=0:2:n;
-fprintf(1,[repmat(' ',1,2),'%3g','%22.12g' ' \n'],k,e(k+1));
+  fprintf(1,[repmat(' ',1,2),'%3g','%22.12g' ' \n'],k,e(k+1));
 end;  k=n+1;
 %format(2x,i3,d22.12);
 end
@@ -47,17 +47,16 @@ en(0+1)=1.0d0;
 en(2+1)=-1.0d0;
 r1=-4.0d0.*hpi.^3;
 for  m=4:2:n;
-r1=-r1.*(m-1).*m.*hpi.*hpi;
-r2=1.0d0;
-isgn=1.0d0;
-for  k=3:2:1000;
-isgn=-isgn;
-s=(1.0d0./k).^(m+1);
-r2=r2+isgn.*s;
-if(s < 1.0d-15)break; end;
-end;
-en(m+1)=r1.*r2;
+  r1=-r1.*(m-1).*m.*hpi.*hpi;
+  r2=1.0d0;
+  isgn=1.0d0;
+  for  k=3:2:1000;
+    isgn=-isgn;
+    s=(1.0d0./k).^(m+1);
+    r2=r2+isgn.*s;
+    if(s < 1.0d-15)break; end;
+  end;
+  en(m+1)=r1.*r2;
 end;
 return;
 end
-

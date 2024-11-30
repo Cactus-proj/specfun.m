@@ -25,8 +25,8 @@ function mcerror
 %                  5.0     2.0      1.00000000       .00000000
 %       ============================================================
 z=[];cer=[];
-  x=0;
- y=0;
+x=0;
+y=0;
 fprintf(1,'%s \n','x,y=?');
 % READ(*,*)X,Y
 x=2.0;
@@ -46,37 +46,36 @@ function [z,cer]=cerror(z,cer,varargin);
 %       Input :  z   --- Complex argument
 %       Output:  CER --- erf(z)
 %       ====================================================
-  a0=0;
- pi=0;
+a0=0;
+pi=0;
 a0=abs(z);
 c0=exp(-z.*z);
 pi=3.141592653589793d0;
 z1=z;
 if(real(z)< 0.0);
-z1=-z;
+  z1=-z;
 end;
 if(a0 <= 5.8d0);
-cs=z1;
-cr=z1;
-for  k=1:120;
-cr=cr.*z1.*z1./(k+0.5d0);
-cs=cs+cr;
-if(abs(cr./cs)< 1.0d-15)break; end;
-end;
-cer=2.0d0.*c0.*cs./sqrt(pi);
+  cs=z1;
+  cr=z1;
+  for  k=1:120;
+    cr=cr.*z1.*z1./(k+0.5d0);
+    cs=cs+cr;
+    if(abs(cr./cs)< 1.0d-15)break; end;
+  end;
+  cer=2.0d0.*c0.*cs./sqrt(pi);
 else;
-cl=1.0d0./z1;
-cr=cl;
-for  k=1:13;
-cr=-cr.*(k-0.5d0)./(z1.*z1);
-cl=cl+cr;
-if(abs(cr./cl)< 1.0d-15)break; end;
-end;
-cer=1.0d0-c0.*cl./sqrt(pi);
+  cl=1.0d0./z1;
+  cr=cl;
+  for  k=1:13;
+    cr=-cr.*(k-0.5d0)./(z1.*z1);
+    cl=cl+cr;
+    if(abs(cr./cl)< 1.0d-15)break; end;
+  end;
+  cer=1.0d0-c0.*cl./sqrt(pi);
 end;
 if(real(z)< 0.0);
-cer=-cer;
+  cer=-cer;
 end;
 return;
 end
-

@@ -22,8 +22,8 @@ function meix
 %                  5     .40185275E+02
 %       =========================================================
 x=[];ei=[];
-  ei=0;
- x=0;
+ei=0;
+x=0;
 fprintf(1,'%s \n','please enter x ');
 %        READ(*,*)X
 x=5;
@@ -41,26 +41,25 @@ function [x,ei]=eix(x,ei,varargin);
 %       Output:  EI --- Ei(x,x > 0)
 %       ============================================
 if(x == 0.0);
-ei=-1.0d+300;
+  ei=-1.0d+300;
 elseif(x <= 40.0);
-ei=1.0d0;
-r=1.0d0;
-for  k=1:100;
-r=r.*k.*x./(k+1.0d0).^2;
-ei=ei+r;
-if(abs(r./ei)<= 1.0d-15)break; end;
-end;
-ga=0.5772156649015328d0;
-ei=ga+log(x)+x.*ei;
+  ei=1.0d0;
+  r=1.0d0;
+  for  k=1:100;
+    r=r.*k.*x./(k+1.0d0).^2;
+    ei=ei+r;
+    if(abs(r./ei)<= 1.0d-15)break; end;
+  end;
+  ga=0.5772156649015328d0;
+  ei=ga+log(x)+x.*ei;
 else;
-ei=1.0d0;
-r=1.0d0;
-for  k=1:20;
-r=r.*k./x;
-ei=ei+r;
-end;  k=20+1;
-ei=exp(x)./x.*ei;
+  ei=1.0d0;
+  r=1.0d0;
+  for  k=1:20;
+    r=r.*k./x;
+    ei=ei+r;
+  end;  k=20+1;
+  ei=exp(x)./x.*ei;
 end;
 return;
 end
-

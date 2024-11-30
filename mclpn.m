@@ -28,7 +28,7 @@ function mclpn
 %       5  -.461700D+04   .562000D+03  -.481500D+04   .441000D+04
 %       ==========================================================
 n=[];x=[];y=[];cpn=[];cpd=[];
- cpn=zeros(1,100+1);
+cpn=zeros(1,100+1);
 cpd=zeros(1,100+1);
 fprintf(1,'%s \n','  please enter nmax, x and y(z=x+iy)');
 %        READ(*,*)N,X,Y
@@ -41,7 +41,7 @@ fprintf(1,'%0.15g \n');
 fprintf(1,'%s ','  n    re[pn(z)]im[pn(z)]re[pn''(z)]');fprintf(1,'%s \n', '   im[pn''(z)]');
 fprintf(1,'%s ',' ---------------------------------------------');fprintf(1,'%s \n', '--------------');
 for  k=0:n;
-fprintf(1,[repmat(' ',1,1),'%3g',repmat('%14.6g',1,4) ' \n'],k,cpn(k+1),cpd(k+1));
+    fprintf(1,[repmat(' ',1,1),'%3g',repmat('%14.6g',1,4) ' \n'],k,cpn(k+1),cpd(k+1));
 end;  k=n+1;
 %format(1x,i3,4d14.6);
 %format(3x,',f5.1,',  ',',f5.1);
@@ -65,16 +65,15 @@ cpd(1+1)=complex(1.0d0,0.0d0);
 cp0=complex(1.0d0,0.0d0);
 cp1=z;
 for  k=2:n;
-cpf=(2.0d0.*k-1.0d0)./k.*z.*cp1-(k-1.0d0)./k.*cp0;
-cpn(k+1)=cpf;
-if(abs(x)== 1.0d0&y == 0.0d0);
-cpd(k+1)=0.5d0.*x.^(k).*k.*(k+1.0d0);
-else;
-cpd(k+1)=k.*(cp1-z.*cpf)./(1.0d0-z.*z);
-end;
-cp0=cp1;
-cp1=cpf;
+    cpf=(2.0d0.*k-1.0d0)./k.*z.*cp1-(k-1.0d0)./k.*cp0;
+    cpn(k+1)=cpf;
+    if(abs(x)== 1.0d0&y == 0.0d0);
+        cpd(k+1)=0.5d0.*x.^(k).*k.*(k+1.0d0);
+    else;
+        cpd(k+1)=k.*(cp1-z.*cpf)./(1.0d0-z.*z);
+    end;
+    cp0=cp1;
+    cp1=cpf;
 end;  k=fix(n)+1;
 return;
 end
-
