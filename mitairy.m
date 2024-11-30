@@ -40,7 +40,7 @@ end
 function [x,apt,bpt,ant,bnt]=itairy(x,apt,bpt,ant,bnt,varargin);
 %       ======================================================
 %       Purpose: Compute the integrals of Airy fnctions with
-%                respect to t from 0 and x(x ò 0)
+%                respect to t from 0 and x(x â‰¥ 0)
 %       Input  : x   --- Upper limit of the integral
 %       Output : APT --- Integration of Ai(t)from 0 and x
 %                BPT --- Integration of Bi(t)from 0 and x

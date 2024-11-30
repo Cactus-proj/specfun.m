@@ -21,7 +21,7 @@ function mothpl
 %                x ---  Argument
 %       Output:  PL(n)--- Tn(x)or Un(x)or Ln(x)or Hn(x)
 %                DPL(n)--- Tn'(x)or Un'(x)or Ln'(x)or Hn'(x)
-%                          n = 0,1,2,...,N(N ó 100)
+%                          n = 0,1,2,...,N(N â‰¤ 100)
 %       =========================================================
 kf=[];n=[];x=[];pl=[];dpl=[];
  pl=zeros(1,100+1);

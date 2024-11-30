@@ -15,7 +15,7 @@ function mrswfo
 %       Input :  m  --- Mode parameter, m = 0,1,2,...
 %       n  --- Mode parameter, n = m,m+1,m+2,...
 %       c  --- Spheroidal parameter
-%       x  --- Argument(x ò 0)
+%       x  --- Argument(x â‰¥ 0)
 %       cv --- Characteristic value
 %       KF --- Function code
 %       KF=1 for the first kind
@@ -49,7 +49,7 @@ fprintf(1,'%s \n','please enter kf');
 %       READ(*,*)KF
 kf=3;
 fprintf(1,[repmat(' ',1,1),'kf=','%3g' ' \n'],kf);
-fprintf(1,'%s \n','please enter m, n, c and x(x ò 0)');
+fprintf(1,'%s \n','please enter m, n, c and x(x â‰¥ 0)');
 %       READ(*,*)M,N,C,X
 m=2;
 n=3;
@@ -86,7 +86,7 @@ function [m,n,c,x,cv,kf,r1f,r1d,r2f,r2d]=rswfo(m,n,c,x,cv,kf,r1f,r1d,r2f,r2d,var
 %       Input :  m  --- Mode parameter,  m = 0,1,2,...
 %       n  --- Mode parameter,  n = m,m+1,m+2,...
 %       c  --- Spheroidal parameter
-%       x  --- Argument(x ò 0)
+%       x  --- Argument(x â‰¥ 0)
 %       cv --- Characteristic value
 %       KF --- Function code
 %       KF=1 for the first kind
@@ -406,7 +406,7 @@ function [n,x,nm,sj,dj]=sphj(n,x,nm,sj,dj,varargin);
 %       Purpose: Compute spherical Bessel functions jn(x)and
 %       their derivatives
 %       Input :  x --- Argument of jn(x)
-%       n --- Order of jn(x,n = 0,1,úúú)
+%       n --- Order of jn(x,n = 0,1,Â·Â·Â·)
 %       Output:  SJ(n)--- jn(x)
 %       DJ(n)--- jn'(x)
 %       NM --- Highest order computed
@@ -604,8 +604,8 @@ function [n,x,nm,sy,dy]=sphy(n,x,nm,sy,dy,varargin);
 %       ======================================================
 %       Purpose: Compute spherical Bessel functions yn(x)and
 %       their derivatives
-%       Input :  x --- Argument of yn(x,x ò 0)
-%       n --- Order of yn(x,n = 0,1,úúú)
+%       Input :  x --- Argument of yn(x,x â‰¥ 0)
+%       n --- Order of yn(x,n = 0,1,Â·Â·Â·)
 %       Output:  SY(n)--- yn(x)
 %       DY(n)--- yn'(x)
 %       NM --- Highest order computed

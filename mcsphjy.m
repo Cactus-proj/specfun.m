@@ -13,7 +13,7 @@ function mcsphjy
 %                jn(z), yn(z), and their derivatives for a complex
 %                argument using subroutine CSPHJY
 %       Input :  z --- Complex argument
-%                n --- Order of jn(z)& yn(z,0 ó n ó 250)
+%                n --- Order of jn(z)& yn(z,0 â‰¤ n â‰¤ 250)
 %       Output:  CSJ(n)--- jn(z)
 %                CDJ(n)--- jn'(z)
 %                CSY(n)--- yn(z)

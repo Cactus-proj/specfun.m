@@ -12,9 +12,9 @@ function mikna
 %       Purpose: This program computes modified Bessel functions
 %                In(x)and Kn(x), and their derivatives using
 %                subroutine IKNA
-%       Input:   x --- Argument of In(x)and Kn(x,x ò 0)
+%       Input:   x --- Argument of In(x)and Kn(x,x â‰¥ 0)
 %                n --- Order of In(x)and Kn(x)
-%(n = 0,1,úúú, n ó 250)
+%(n = 0,1,Â·Â·Â·, n â‰¤ 250)
 %       Output:  BI(n)--- In(x)
 %                DI(n)--- In'(x)
 %                BK(n)--- Kn(x)
@@ -60,7 +60,7 @@ function [n,x,nm,bi,di,bk,dk]=ikna(n,x,nm,bi,di,bk,dk,varargin);
 %       ========================================================
 %       Purpose: Compute modified Bessel functions In(x)and
 %                Kn(x), and their derivatives
-%       Input:   x --- Argument of In(x)and Kn(x,x ò 0)
+%       Input:   x --- Argument of In(x)and Kn(x,x â‰¥ 0)
 %                n --- Order of In(x)and Kn(x)
 %       Output:  BI(n)--- In(x)
 %                DI(n)--- In'(x)
@@ -142,7 +142,7 @@ function [x,bi0,di0,bi1,di1,bk0,dk0,bk1,dk1]=ik01a(x,bi0,di0,bi1,di1,bk0,dk0,bk1
 %       =========================================================
 %       Purpose: Compute modified Bessel functions I0(x), I1(1),
 %                K0(x)and K1(x), and their derivatives
-%       Input :  x   --- Argument(x ò 0)
+%       Input :  x   --- Argument(x â‰¥ 0)
 %       Output:  BI0 --- I0(x)
 %                DI0 --- I0'(x)
 %                BI1 --- I1(x)

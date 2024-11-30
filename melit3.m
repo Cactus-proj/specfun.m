@@ -12,9 +12,9 @@ function melit3
 %       Purpose: This program computes the elliptic integral of
 %                the third kind using subroutine ELIT3
 %       Input :  Phi --- Argument(in degrees)
-%                 k  --- Modulus(0 ó k ó 1)
-%                 c  --- Parameter(0 ó c ó 1)
-%       Output:  EL3 ÄÄÄ Value of the elliptic integral of the
+%                 k  --- Modulus(0 â‰¤ k â‰¤ 1)
+%                 c  --- Parameter(0 â‰¤ c â‰¤ 1)
+%       Output:  EL3 â”€â”€â”€ Value of the elliptic integral of the
 %                        third kind
 %       ==========================================================
 phi=[];hk=[];c=[];el3=[];
@@ -32,8 +32,8 @@ function [phi,hk,c,el3]=elit3(phi,hk,c,el3,varargin);
 %       Purpose: Compute the elliptic integral of the third kind
 %                using Gauss-Legendre quadrature
 %       Input :  Phi --- Argument(in degrees)
-%                 k  --- Modulus(0 ó k ó 1.0)
-%                 c  --- Parameter(0 ó c ó 1.0)
+%                 k  --- Modulus(0 â‰¤ k â‰¤ 1.0)
+%                 c  --- Parameter(0 â‰¤ c â‰¤ 1.0)
 %       Output:  EL3 --- Value of the elliptic integral of the
 %                        third kind
 %       =========================================================

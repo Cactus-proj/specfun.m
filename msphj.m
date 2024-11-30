@@ -13,7 +13,7 @@ function msphj
 %                functions jn(x)and jn'(x)using subroutine
 %                SPHJ
 %       Input :  x --- Argument of jn(x)
-%                n --- Order of jn(x,n = 0,1,úúú,ó 250)
+%                n --- Order of jn(x,n = 0,1,Â·Â·Â·,â‰¤ 250)
 %       Output:  SJ(n)--- jn(x)
 %                DJ(n)--- jn'(x)
 %       Example:   x =10.0
@@ -56,7 +56,7 @@ function [n,x,nm,sj,dj]=sphj(n,x,nm,sj,dj,varargin);
 %       Purpose: Compute spherical Bessel functions jn(x)and
 %                their derivatives
 %       Input :  x --- Argument of jn(x)
-%                n --- Order of jn(x,n = 0,1,úúú)
+%                n --- Order of jn(x,n = 0,1,Â·Â·Â·)
 %       Output:  SJ(n)--- jn(x)
 %                DJ(n)--- jn'(x)
 %                NM --- Highest order computed

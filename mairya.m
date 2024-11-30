@@ -94,7 +94,7 @@ function [x,vj1,vj2,vy1,vy2,vi1,vi2,vk1,vk2]=ajyik(x,vj1,vj2,vy1,vy2,vi1,vi2,vk1
 %                and modified Bessel functions Iv(x)and
 %                Kv(x), and their derivatives with v=1/3,2/3
 %       Input :  x --- Argument of Jv(x),Yv(x),Iv(x)and
-%                      Kv(x,x ò 0)
+%                      Kv(x,x â‰¥ 0)
 %       Output:  VJ1 --- J1/3(x)
 %                VJ2 --- J2/3(x)
 %                VY1 --- Y1/3(x)

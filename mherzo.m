@@ -10,7 +10,7 @@ function mherzo
 
 %       ===========================================================
 %       Purpose : This program computes the zeros of Hermite
-%                 polynomial Ln(x)in the interval[-ì,ì]and the
+%                 polynomial Ln(x)in the interval[-âˆž,âˆž]and the
 %                 corresponding weighting coefficients for Gauss-
 %                 Hermite integration using subroutine HERZO
 %       Input :   n    --- Order of the Hermite polynomial
@@ -38,7 +38,7 @@ end
 function [n,x,w]=herzo(n,x,w,varargin);
 %       ========================================================
 %       Purpose : Compute the zeros of Hermite polynomial Ln(x)
-%                 in the interval[-ì,ì], and the corresponding
+%                 in the interval[-âˆž,âˆž], and the corresponding
 %                 weighting coefficients for Gauss-Hermite
 %                 integration
 %       Input :   n    --- Order of the Hermite polynomial

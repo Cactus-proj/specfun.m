@@ -41,7 +41,7 @@ end
 function [n,x,en]=enxa(n,x,en,varargin);
 %       ============================================
 %       Purpose: Compute exponential integral En(x)
-%       Input :  x --- Argument of En(x,x ó 20)
+%       Input :  x --- Argument of En(x,x â‰¤ 20)
 %                n --- Order of En(x)
 %       Output:  EN(n)--- En(x)
 %       Routine called: E1XB for computing E1(x)

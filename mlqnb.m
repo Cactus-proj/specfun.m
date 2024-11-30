@@ -12,7 +12,7 @@ function mlqnb
 %       Purpose: This program computes the Legendre functions Qn(x)
 %                and Qn'(x)using subroutine LQNB
 %       Input :  x  --- Argument of Qn(x)
-%                n  --- Degree of Qn(x,n = 0,1,תתת)
+%                n  --- Degree of Qn(x,n = 0,1,ֲ·ֲ·ֲ·)
 %       Output:  QN(n)--- Qn(x)
 %                QD(n)--- Qn'(x)
 %       Examples:     x1 = 0.50,    x2 = 2.50
@@ -52,7 +52,7 @@ function [n,x,qn,qd]=lqnb(n,x,qn,qd,varargin);
 %       ====================================================
 %       Purpose: Compute Legendre functions Qn(x)& Qn'(x)
 %       Input :  x  --- Argument of Qn(x)
-%                n  --- Degree of Qn(x,n = 0,1,2,תתת)
+%                n  --- Degree of Qn(x,n = 0,1,2,ֲ·ֲ·ֲ·)
 %       Output:  QN(n)--- Qn(x)
 %                QD(n)--- Qn'(x)
 %       ====================================================

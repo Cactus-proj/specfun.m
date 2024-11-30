@@ -14,7 +14,7 @@ function mcjyva
 %     subroutine CJYVA
 %     Input :  z --- Complex argument
 %     v --- Order of Jv(z)and Yv(z)
-%(v = n+v0, 0 ó n ó 250, 0 ó v0 < 1)
+%(v = n+v0, 0 â‰¤ n â‰¤ 250, 0 â‰¤ v0 < 1)
 %     Output:  CBJ(n)--- Jn+v0(z)
 %     CDJ(n)--- Jn+v0'(z)
 %     CBY(n)--- Yn+v0(z)
@@ -82,7 +82,7 @@ function [v,z,vm,cbj,cdj,cby,cdy]=cjyva(v,z,vm,cbj,cdj,cby,cdy,varargin);
 %     derivatives for a complex argument
 %     Input :  z --- Complex argument
 %     v --- Order of Jv(z)and Yv(z)
-%(v = n+v0, n = 0,1,2,..., 0 ó v0 < 1)
+%(v = n+v0, n = 0,1,2,..., 0 â‰¤ v0 < 1)
 %     Output:  CBJ(n)--- Jn+v0(z)
 %     CDJ(n)--- Jn+v0'(z)
 %     CBY(n)--- Yn+v0(z)
@@ -340,10 +340,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %     ==================================================
-%     Purpose: Compute gamma function â(x)
-%     Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%     Output:  GA --- â(x)
+%     Purpose: Compute gamma function Î“(x)
+%     Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%     Output:  GA --- Î“(x)
 %     ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

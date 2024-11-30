@@ -18,7 +18,7 @@ function mcjk
 %       ============================================================
 km=[];a=[];
  a=zeros(1,231);
-fprintf(1,'%s \n','please enter km(ó 20)');
+fprintf(1,'%s \n','please enter km(â‰¤ 20)');
 %        READ(*,*)KM
 km=2;
 lm=km+1+(km.*(km+1))./2;

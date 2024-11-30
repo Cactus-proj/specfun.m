@@ -15,7 +15,7 @@ function mch12n
 %     subroutine CH12N
 %     Input :  z --- Complex argument
 %     n --- Order of Hn(1,z)and Hn(2,z)
-%(n = 0,1,תתת, n ף 250)
+%(n = 0,1,ֲ·ֲ·ֲ·, n ג‰₪ 250)
 %     Output:  CHF1(n)--- Hn(1,z)
 %     CHD1(n)--- Hn(1)'(z)
 %     CHF2(n)--- Hn(2,z)

@@ -12,9 +12,9 @@ function miknb
 %       Purpose: This program computes modified Bessel functions
 %                In(x)and Kn(x), and their derivatives using
 %                subroutine IKNB
-%       Input:   x --- Argument of In(x)and Kn(x,0 ó x ó 700)
+%       Input:   x --- Argument of In(x)and Kn(x,0 â‰¤ x â‰¤ 700)
 %                n --- Order of In(x)and Kn(x)
-%(n = 0,1,..., n ó 250)
+%(n = 0,1,..., n â‰¤ 250)
 %       Output:  BI(n)--- In(x)
 %                DI(n)--- In'(x)
 %                BK(n)--- Kn(x)
@@ -60,7 +60,7 @@ function [n,x,nm,bi,di,bk,dk]=iknb(n,x,nm,bi,di,bk,dk,varargin);
 %       ============================================================
 %       Purpose: Compute modified Bessel functions In(x)and Kn(x),
 %                and their derivatives
-%       Input:   x --- Argument of In(x)and Kn(x,0 ó x ó 700)
+%       Input:   x --- Argument of In(x)and Kn(x,0 â‰¤ x â‰¤ 700)
 %                n --- Order of In(x)and Kn(x)
 %       Output:  BI(n)--- In(x)
 %                DI(n)--- In'(x)

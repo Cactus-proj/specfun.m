@@ -12,7 +12,7 @@ function mitjyb
 %       Purpose: This program evaluates the integral of Bessel
 %                functions J0(t)and Y0(t)with respect to t
 %                from 0 to x using subroutine ITJYB
-%       Input :  x  --- Upper limit of the integral(x ò 0)
+%       Input :  x  --- Upper limit of the integral(x â‰¥ 0)
 %       Output:  TJ --- Integration of J0(t)from 0 to x
 %                TY --- Integration of Y0(t)from 0 to x
 %       Example:
@@ -41,7 +41,7 @@ end
 function [x,tj,ty]=itjyb(x,tj,ty,varargin);
 %       =======================================================
 %       Purpose: Integrate Bessel functions J0(t)and Y0(t)
-%                with respect to t from 0 to x(x ò 0)
+%                with respect to t from 0 to x(x â‰¥ 0)
 %       Input :  x  --- Upper limit of the integral
 %       Output:  TJ --- Integration of J0(t)from 0 to x
 %                TY --- Integration of Y0(t)from 0 to x

@@ -13,8 +13,8 @@ function mlqmn
 %                functions Qmn(x)and their derivatives Qmn'(x)using
 %                subroutine LQMN
 %       Input :  x --- Argument of Qmn(x)
-%                m --- Order of Qmn(x,m = 0,1,2,תתת)
-%                n --- Degree of Qmn(x,n = 0,1,2,תתת)
+%                m --- Order of Qmn(x,m = 0,1,2,ֲ·ֲ·ֲ·)
+%                n --- Degree of Qmn(x,n = 0,1,2,ֲ·ֲ·ֲ·)
 %       Output:  QM(m,n)--- Qmn(x)
 %                QD(m,n)--- Qmn'(x)
 %       Examples:
@@ -73,8 +73,8 @@ function [mm,m,n,x,qm,qd]=lqmn(mm,m,n,x,qm,qd,varargin);
 %       Purpose: Compute the associated Legendre functions of the
 %                second kind, Qmn(x)and Qmn'(x)
 %       Input :  x  --- Argument of Qmn(x)
-%                m  --- Order of Qmn(x,m = 0,1,2,תתת)
-%                n  --- Degree of Qmn(x,n = 0,1,2,תתת)
+%                m  --- Order of Qmn(x,m = 0,1,2,ֲ·ֲ·ֲ·)
+%                n  --- Degree of Qmn(x,n = 0,1,2,ֲ·ֲ·ֲ·)
 %                mm --- Physical dimension of QM and QD
 %       Output:  QM(m,n)--- Qmn(x)
 %                QD(m,n)--- Qmn'(x)

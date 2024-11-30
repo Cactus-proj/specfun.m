@@ -17,7 +17,7 @@ function mcisia
 %     Example:
 %     x         Ci(x)Si(x)
 %     ------------------------------------
-%     0.0     - ì             .00000000
+%     0.0     - âˆž             .00000000
 %     5.0     -.19002975     1.54993124
 %     10.0     -.04545643     1.65834759
 %     20.0      .04441982     1.54824170
@@ -35,14 +35,14 @@ fprintf(1,'%s \n','   x         ci(x)si(x)');
 fprintf(1,'%s \n','------------------------------------');
 [x,ci,si]=cisia(x,ci,si);
 if(x ~= 0.0d0)fprintf(1,[repmat(' ',1,1),'%5.1g',repmat('%15.8g',1,2) ' \n'],x,ci,si); end;
-if(x == 0.0d0)fprintf(1,[repmat(' ',1,3),' .0',repmat(' ',1,4),' - ì',repmat(' ',1,13),'.00000000' ' \n']); end;
+if(x == 0.0d0)fprintf(1,[repmat(' ',1,3),' .0',repmat(' ',1,4),' - âˆž',repmat(' ',1,13),'.00000000' ' \n']); end;
 %format(1x,f5.1,2f15.8);
-%format(3x,' .0',4x,' - ì',13x,'.00000000');
+%format(3x,' .0',4x,' - âˆž',13x,'.00000000');
 end
 function [x,ci,si]=cisia(x,ci,si,varargin);
 %     =============================================
 %     Purpose: Compute cosine and sine integrals
-%     Si(x)and Ci(x,x ò 0)
+%     Si(x)and Ci(x,x â‰¥ 0)
 %     Input :  x  --- Argument of Ci(x)and Si(x)
 %     Output:  CI --- Ci(x)
 %     SI --- Si(x)

@@ -18,8 +18,8 @@ function mclqmn
 %                   Q0(z)=1/2*LOG[(z+1)/(z-1)](for |z|>1)
 %       Input :  x --- Real part of z
 %                y --- Imaginary part of z
-%                m --- Order of Qmn(z,m = 0,1,2,תתת)
-%                n --- Degree of Qmn(z,n = 0,1,2,תתת)
+%                m --- Order of Qmn(z,m = 0,1,2,ֲ·ֲ·ֲ·)
+%                n --- Degree of Qmn(z,n = 0,1,2,ֲ·ֲ·ֲ·)
 %       Output:  CQM(m,n)--- Qmn(z)
 %                CQD(m,n)--- Qmn'(z)
 %       Examples:
@@ -68,8 +68,8 @@ function [mm,m,n,x,y,cqm,cqd]=clqmn(mm,m,n,x,y,cqm,cqd,varargin);
 %                complex argument
 %       Input :  x  --- Real part of z
 %                y  --- Imaginary part of z
-%                m  --- Order of Qmn(z,m = 0,1,2,תתת)
-%                n  --- Degree of Qmn(z,n = 0,1,2,תתת)
+%                m  --- Order of Qmn(z,m = 0,1,2,ֲ·ֲ·ֲ·)
+%                n  --- Degree of Qmn(z,n = 0,1,2,ֲ·ֲ·ֲ·)
 %                mm --- Physical dimension of CQM and CQD
 %       Output:  CQM(m,n)--- Qmn(z)
 %                CQD(m,n)--- Qmn'(z)

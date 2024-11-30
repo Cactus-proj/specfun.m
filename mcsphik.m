@@ -13,7 +13,7 @@ function mcsphik
 %                functions and their derivatives for a complex
 %                argument using subroutine CSPHIK
 %       Input :  z --- Complex argument
-%                n --- Order of in(z)& kn(z,0 ó n ó 250)
+%                n --- Order of in(z)& kn(z,0 â‰¤ n â‰¤ 250)
 %       Output:  CSI(n)--- in(z)
 %                CDI(n)--- in'(z)
 %                CSK(n)--- kn(z)

@@ -12,7 +12,7 @@ function mitsl0
 %       Purpose: This program evaluates the integral of modified
 %                Struve function L0(t)with respect to t from 0
 %                to x using subroutine ITSL0
-%       Input :  x   --- Upper limit(x ò 0)
+%       Input :  x   --- Upper limit(x â‰¥ 0)
 %       Output:  TL0 --- Integration of L0(t)from 0 to x
 %       Example:
 %                      x        L0(t)dt
@@ -40,7 +40,7 @@ function [x,tl0]=itsl0(x,tl0,varargin);
 %       ===========================================================
 %       Purpose: Evaluate the integral of modified Struve function
 %                L0(t)with respect to t from 0 to x
-%       Input :  x   --- Upper limit(x ò 0)
+%       Input :  x   --- Upper limit(x â‰¥ 0)
 %       Output:  TL0 --- Integration of L0(t)from 0 to x
 %       ===========================================================
  a=zeros(1,18);

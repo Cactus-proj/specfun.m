@@ -12,8 +12,8 @@ function msphy
 %       Purpose: This program computes the spherical Bessel
 %                functions yn(x)and yn'(x)using subroutine
 %                SPHY
-%       Input :  x --- Argument of yn(x,x ò 0)
-%                n --- Order of yn(x,n = 0,1,úúú, ó 250)
+%       Input :  x --- Argument of yn(x,x â‰¥ 0)
+%                n --- Order of yn(x,n = 0,1,Â·Â·Â·, â‰¤ 250)
 %       Output:  SY(n)--- yn(x)
 %                DY(n)--- yn'(x)
 %       Example:   x = 10.0
@@ -55,8 +55,8 @@ function [n,x,nm,sy,dy]=sphy(n,x,nm,sy,dy,varargin);
 %       ======================================================
 %       Purpose: Compute spherical Bessel functions yn(x)and
 %                their derivatives
-%       Input :  x --- Argument of yn(x,x ò 0)
-%                n --- Order of yn(x,n = 0,1,úúú)
+%       Input :  x --- Argument of yn(x,x â‰¥ 0)
+%                n --- Order of yn(x,n = 0,1,Â·Â·Â·)
 %       Output:  SY(n)--- yn(x)
 %                DY(n)--- yn'(x)
 %                NM --- Highest order computed

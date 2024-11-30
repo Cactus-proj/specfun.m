@@ -87,10 +87,10 @@ function [kd,m,q,cv]=cva1(kd,m,q,cv,varargin);
 %     Input :  M  --- Maximum order of Mathieu functions
 %     q  --- Parameter of Mathieu functions
 %     KD --- Case code
-%     KD=1 for cem(x,q,m = 0,2,4,תתת)
-%     KD=2 for cem(x,q,m = 1,3,5,תתת)
-%     KD=3 for sem(x,q,m = 1,3,5,תתת)
-%     KD=4 for sem(x,q,m = 2,4,6,תתת)
+%     KD=1 for cem(x,q,m = 0,2,4,ֲ·ֲ·ֲ·)
+%     KD=2 for cem(x,q,m = 1,3,5,ֲ·ֲ·ֲ·)
+%     KD=3 for sem(x,q,m = 1,3,5,ֲ·ֲ·ֲ·)
+%     KD=4 for sem(x,q,m = 2,4,6,ֲ·ֲ·ֲ·)
 %     Output:  CV(I)--- Characteristic values; I = 1,2,3,...
 %     For KD=1, CV(1), CV(2), CV(3),..., correspond to
 %     the characteristic values of cem for m = 0,2,4,...

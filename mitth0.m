@@ -12,7 +12,7 @@ function mitth0
 %       Purpose: This program evaluates the integral of H0(t)/t
 %                with respect to t from x to infinity using
 %                subroutine ITTH0
-%       Input :  x   --- Lower limit(x ò 0)
+%       Input :  x   --- Lower limit(x â‰¥ 0)
 %       Output:  TTH --- Integration of H0(t)/t from x to infinity
 %       Example:
 %                    x        H0(t)/t dt
@@ -40,7 +40,7 @@ function [x,tth]=itth0(x,tth,varargin);
 %       ===========================================================
 %       Purpose: Evaluate the integral H0(t)/t with respect to t
 %                from x to infinity
-%       Input :  x   --- Lower limit(x ò 0)
+%       Input :  x   --- Lower limit(x â‰¥ 0)
 %       Output:  TTH --- Integration of H0(t)/t from x to infinity
 %       ===========================================================
 pi=3.141592653589793d0;

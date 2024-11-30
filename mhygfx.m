@@ -14,7 +14,7 @@ function mhygfx
 %     Input :  a --- Parameter
 %     b --- Parameter
 %     c --- Parameter, c <> 0,-1,-2,...
-%     x --- Argument(x ó 1)
+%     x --- Argument(x â‰¤ 1)
 %     Output:  HF --- F(a,b,c,x)
 %     Example:
 %     b = 3.30,  c = 6.70
@@ -255,10 +255,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %     ==================================================
-%     Purpose: Compute gamma function â(x)
-%     Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%     Output:  GA --- â(x)
+%     Purpose: Compute gamma function Î“(x)
+%     Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%     Output:  GA --- Î“(x)
 %     ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

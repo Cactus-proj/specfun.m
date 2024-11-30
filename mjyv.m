@@ -13,7 +13,7 @@ function mjyv
 %     Yv(x)and their derivatives using subroutine JYV
 %     Input :  x --- Argument of Jv(x)and Yv(x)
 %     v --- Order of Jv(x)and Yv(x)
-%(v = n+v0,  0 ó n ó 250, 0 ó v0 < 1)
+%(v = n+v0,  0 â‰¤ n â‰¤ 250, 0 â‰¤ v0 < 1)
 %     Output:  BJ(n)--- Jn+v0(x)
 %     DJ(n)--- Jn+v0'(x)
 %     BY(n)--- Yn+v0(x)
@@ -67,7 +67,7 @@ function [v,x,vm,bj,dj,by,dy]=jyv(v,x,vm,bj,dj,by,dy,varargin);
 %     and their derivatives
 %     Input :  x --- Argument of Jv(x)and Yv(x)
 %     v --- Order of Jv(x)and Yv(x)
-%(v = n+v0, 0 ó v0 < 1, n = 0,1,2,...)
+%(v = n+v0, 0 â‰¤ v0 < 1, n = 0,1,2,...)
 %     Output:  BJ(n)--- Jn+v0(x)
 %     DJ(n)--- Jn+v0'(x)
 %     BY(n)--- Yn+v0(x)
@@ -249,10 +249,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %     ==================================================
-%     Purpose: Compute gamma function â(x)
-%     Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%     Output:  GA --- â(x)
+%     Purpose: Compute gamma function Î“(x)
+%     Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%     Output:  GA --- Î“(x)
 %     ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

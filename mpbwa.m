@@ -10,10 +10,10 @@ function mpbwa
 
 %       ============================================================
 %       Purpose: This program computes the parabolic cylinder
-%                functions W(a,ñx)and their derivatives using
+%                functions W(a,Â±x)and their derivatives using
 %                subroutine PBWA
-%       Input  : a --- Parameter(0 ó |a| ó 5)
-%                x --- Argument of W(a,ñx,0 ó |x| ó 5)
+%       Input  : a --- Parameter(0 â‰¤ |a| â‰¤ 5)
+%                x --- Argument of W(a,Â±x,0 â‰¤ |x| â‰¤ 5)
 %       Output : W1F --- W(a,x)
 %                W1D --- W'(a,x)
 %                W2F --- W(a,-x)
@@ -44,10 +44,10 @@ fprintf(1,[repmat(' ',1,1),'%5.1g',repmat('%16.8g',1,4) ' \n'],a,w1f,w1d,w2f,w2d
 end
 function [a,x,w1f,w1d,w2f,w2d]=pbwa(a,x,w1f,w1d,w2f,w2d,varargin);
 %       ======================================================
-%       Purpose: Compute parabolic cylinder functions W(a,ñx)
+%       Purpose: Compute parabolic cylinder functions W(a,Â±x)
 %                and their derivatives
-%       Input  : a --- Parameter(0 ó |a| ó 5)
-%                x --- Argument of W(a,ñx,0 ó |x| ó 5)
+%       Input  : a --- Parameter(0 â‰¤ |a| â‰¤ 5)
+%                x --- Argument of W(a,Â±x,0 â‰¤ |x| â‰¤ 5)
 %       Output : W1F --- W(a,x)
 %                W1D --- W'(a,x)
 %                W2F --- W(a,-x)
@@ -138,14 +138,14 @@ return;
 end
 function [x,y,kf,gr,gi]=cgama(x,y,kf,gr,gi,varargin);
 %       =========================================================
-%       Purpose: Compute complex gamma function â(z)or Ln[â(z)]
+%       Purpose: Compute complex gamma function Î“(z)or Ln[Î“(z)]
 %       Input :  x  --- Real part of z
 %                y  --- Imaginary part of z
 %                KF --- Function code
-%                       KF=0 for Ln[â(z)]
-%                       KF=1 for â(z)
-%       Output:  GR --- Real part of Ln[â(z)]or â(z)
-%                GI --- Imaginary part of Ln[â(z)]or â(z)
+%                       KF=0 for Ln[Î“(z)]
+%                       KF=1 for Î“(z)
+%       Output:  GR --- Real part of Ln[Î“(z)]or Î“(z)
+%                GI --- Imaginary part of Ln[Î“(z)]or Î“(z)
 %       ========================================================
  a=zeros(1,10);
 x1=0.0;

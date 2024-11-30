@@ -12,7 +12,7 @@ function mcomelp
 %       Purpose: This program computes complete elliptic
 %                integrals K(k)and E(k)using subroutine
 %                COMELP
-%       Input  : K  --- Modulus k(0 ó k ó 1)
+%       Input  : K  --- Modulus k(0 â‰¤ k â‰¤ 1)
 %       Output : CK --- K(k)
 %                CE --- E(k)
 %       Example:
@@ -22,7 +22,7 @@ function mcomelp
 %                 .25      1.596242      1.545957
 %                 .50      1.685750      1.467462
 %                 .75      1.910990      1.318472
-%                1.00       ì            1.000000
+%                1.00       âˆž            1.000000
 %       ===================================================
 hk=[];ck=[];ce=[];
   hk=0;
@@ -35,15 +35,15 @@ fprintf(1,'%s \n','    k         k(k)e(k)');
 fprintf(1,'%s \n','  ---------------------------------');
 [hk,ck,ce]=comelp(hk,ck,ce);
 if(hk ~= 1.0)fprintf(1,[repmat(' ',1,2),'%5.2g',repmat('%14.6g',1,2) ' \n'],hk,ck,ce); end;
-if(hk == 1.0)fprintf(1,[repmat(' ',1,2),'%5.2g',repmat(' ',1,7),'ì',repmat(' ',1,6),'%14.6g' ' \n'],hk,ce); end;
+if(hk == 1.0)fprintf(1,[repmat(' ',1,2),'%5.2g',repmat(' ',1,7),'âˆž',repmat(' ',1,6),'%14.6g' ' \n'],hk,ce); end;
 %format(2x,f5.2,2f14.6);
-%format(2x,f5.2,7x,'ì',6x,f14.6);
+%format(2x,f5.2,7x,'âˆž',6x,f14.6);
 end
 function [hk,ck,ce]=comelp(hk,ck,ce,varargin);
 %       ==================================================
 %       Purpose: Compute complete elliptic integrals K(k)
 %                and E(k)
-%       Input  : K  --- Modulus k(0 ó k ó 1)
+%       Input  : K  --- Modulus k(0 â‰¤ k â‰¤ 1)
 %       Output : CK --- K(k)
 %                CE --- E(k)
 %       ==================================================

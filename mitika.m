@@ -12,7 +12,7 @@ function mitika
 %       Purpose: This program evaluates the integral of modified
 %                Bessel functions I0(t)and K0(t)with respect to t
 %                from 0 to x using subroutine ITIKA
-%       Input :  x  --- Upper limit of the integral(x ò 0)
+%       Input :  x  --- Upper limit of the integral(x â‰¥ 0)
 %       Output:  TI --- Integration of I0(t)from 0 to x
 %                TK --- Integration of K0(t)from 0 to x
 %       Example:
@@ -38,7 +38,7 @@ function [x,ti,tk]=itika(x,ti,tk,varargin);
 %       =======================================================
 %       Purpose: Integrate modified Bessel functions I0(t)and
 %                K0(t)with respect to t from 0 to x
-%       Input :  x  --- Upper limit of the integral(x ò 0)
+%       Input :  x  --- Upper limit of the integral(x â‰¥ 0)
 %       Output:  TI --- Integration of I0(t)from 0 to x
 %                TK --- Integration of K0(t)from 0 to x
 %       =======================================================

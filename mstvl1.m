@@ -11,7 +11,7 @@ function mstvl1
 %       =====================================================
 %       Purpose: This program computes the modified Struve
 %                function L1(x)using subroutine STVL1
-%       Input :  x   --- Argument of L1(x,x ò 0)
+%       Input :  x   --- Argument of L1(x,x â‰¥ 0)
 %       Output:  SL1 --- L1(x)
 %       Example:
 %                     x        L1(x)
@@ -38,7 +38,7 @@ end
 function [x,sl1]=stvl1(x,sl1,varargin);
 %       ================================================
 %       Purpose: Compute modified Struve function L1(x)
-%       Input :  x   --- Argument of L1(x,x ò 0)
+%       Input :  x   --- Argument of L1(x,x â‰¥ 0)
 %       Output:  SL1 --- L1(x)
 %       ================================================
 pi=3.141592653589793d0;

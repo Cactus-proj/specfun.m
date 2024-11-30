@@ -14,7 +14,7 @@ function mcikna
 %                complex argument using subroutine CIKNA
 %       Input :  z --- Complex argument of In(z)and Kn(z)
 %                n --- Order of In(z)and Kn(z)
-%(n = 0,1,úúú, n ó 250)
+%(n = 0,1,Â·Â·Â·, n â‰¤ 250)
 %       Output:  CBI(n)--- In(z)
 %                CDI(n)--- In'(z)
 %                CBK(n)--- Kn(z)

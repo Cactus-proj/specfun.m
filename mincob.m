@@ -13,7 +13,7 @@ function mincob
 %                function Ix(a,b)using subroutine INCOB
 %       Input :  a --- Parameter
 %                b --- Parameter
-%                x --- Argument(0 ó x ó 1)
+%                x --- Argument(0 â‰¤ x â‰¤ 1)
 %       Output:  BIX --- Ix(a,b)
 %       Example:
 %                  a       b       x       Ix(a,b)
@@ -21,7 +21,7 @@ function mincob
 %                 1.0     3.0     .25     .57812500
 %       =========================================================
 a=[];b=[];x=[];bix=[];
-fprintf(1,'%s \n','please enter a, b and x(0 ó x ó 1)');
+fprintf(1,'%s \n','please enter a, b and x(0 â‰¤ x â‰¤ 1)');
 %        READ(*,*)A,B,X
 a=1.0;
 b=3.0;
@@ -38,7 +38,7 @@ function [a,b,x,bix]=incob(a,b,x,bix,varargin);
 %       Purpose: Compute the incomplete beta function Ix(a,b)
 %       Input :  a --- Parameter
 %                b --- Parameter
-%                x --- Argument(0 ó x ó 1)
+%                x --- Argument(0 â‰¤ x â‰¤ 1)
 %       Output:  BIX --- Ix(a,b)
 %       Routine called: BETA for computing beta function B(p,q)
 %       ========================================================
@@ -82,7 +82,7 @@ function [p,q,bt]=beta(p,q,bt,varargin);
 %       Input :  p --- Parameter(p > 0)
 %                q --- Parameter(q > 0)
 %       Output:  BT --- B(p,q)
-%       Routine called: GAMMA for computing â(x)
+%       Routine called: GAMMA for computing Î“(x)
 %       ==========================================
 gp=[];gq=[];ppq=[];gpq=[];
 [p,gp]=gamma(p,gp);
@@ -94,10 +94,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %       ==================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%       Output:  GA --- Î“(x)
 %       ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

@@ -399,7 +399,7 @@ function [n,x,nm,sj,dj]=sphj(n,x,nm,sj,dj,varargin);
 %     Purpose: Compute spherical Bessel functions jn(x)and
 %     their derivatives
 %     Input :  x --- Argument of jn(x)
-%     n --- Order of jn(x,n = 0,1,úúú)
+%     n --- Order of jn(x,n = 0,1,Â·Â·Â·)
 %     Output:  SJ(n)--- jn(x)
 %     DJ(n)--- jn'(x)
 %     NM --- Highest order computed
@@ -597,8 +597,8 @@ function [n,x,nm,sy,dy]=sphy(n,x,nm,sy,dy,varargin);
 %     ======================================================
 %     Purpose: Compute spherical Bessel functions yn(x)and
 %     their derivatives
-%     Input :  x --- Argument of yn(x,x ò 0)
-%     n --- Order of yn(x,n = 0,1,úúú)
+%     Input :  x --- Argument of yn(x,x â‰¥ 0)
+%     n --- Order of yn(x,n = 0,1,Â·Â·Â·)
 %     Output:  SY(n)--- yn(x)
 %     DY(n)--- yn'(x)
 %     NM --- Highest order computed

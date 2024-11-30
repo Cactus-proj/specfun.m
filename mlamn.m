@@ -14,7 +14,7 @@ function mlamn
 %                LAMN
 %       Input:   x --- Argument of lambda function
 %                n --- Order of lambda function
-%(n = 0,1,..., n ó 250)
+%(n = 0,1,..., n â‰¤ 250)
 %       Output:  BL(n)--- Lambda function of order n
 %                DL(n)--- Derivative of lambda function
 %       Example: Nmax = 5,  x = 10.00

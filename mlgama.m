@@ -10,9 +10,9 @@ function mlgama
 
 %       ===================================================
 %       Purpose: This program computes the gamma function
-%                â(x)for x > 0 using subroutine LGAMA
+%                Î“(x)for x > 0 using subroutine LGAMA
 %       Examples:
-%                  x           â(x)
+%                  x           Î“(x)
 %                -------------------------
 %                 0.5     .1772453851D+01
 %                 2.5     .1329340388D+01
@@ -21,7 +21,7 @@ function mlgama
 %                10.0     .3628800000D+06
 %       ===================================================
 x=[];gl=[];
-fprintf(1,'%s \n','   x           â(x)');
+fprintf(1,'%s \n','   x           Î“(x)');
 fprintf(1,'%s \n',' -------------------------');
 for  l=0:5:20;
 x=0.5d0.*l;
@@ -38,11 +38,11 @@ fprintf(1,[repmat(' ',1,1),'%5.1g','%20.10g' ' \n'],x,gl);
 end
 function [kf,x,gl]=lgama(kf,x,gl,varargin);
 %       ==================================================
-%       Purpose: Compute gamma function â(x)or ln[â(x)]
-%       Input:   x  --- Argument of â(x,x > 0)
+%       Purpose: Compute gamma function Î“(x)or ln[Î“(x)]
+%       Input:   x  --- Argument of Î“(x,x > 0)
 %                KF --- Function code
-%                       KF=1 for â(x); KF=0 for ln[â(x)]
-%       Output:  GL --- â(x)or ln[â(x)]
+%                       KF=1 for Î“(x); KF=0 for ln[Î“(x)]
+%       Output:  GL --- Î“(x)or ln[Î“(x)]
 %       ==================================================
  a=zeros(1,10);
 a(:)=[8.333333333333333d-02,-2.777777777777778d-03,7.936507936507937d-04,-5.952380952380952d-04,8.417508417508418d-04,-1.917526917526918d-03,6.410256410256410d-03,-2.955065359477124d-02,1.796443723688307d-01,-1.39243221690590d+00];

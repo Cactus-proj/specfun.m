@@ -10,7 +10,7 @@ function mlagzo
 
 %       ===========================================================
 %       Purpose : This program computes the zeros of Laguerre
-%                 polynomial Ln(x)in the interval[0,ì]and the
+%                 polynomial Ln(x)in the interval[0,âˆž]and the
 %                 corresponding weighting coefficients for Gauss-
 %                 Laguerre integration using subroutine LAGZO
 %       Input :   n    --- Order of the Laguerre polynomial
@@ -38,7 +38,7 @@ end
 function [n,x,w]=lagzo(n,x,w,varargin);
 %       =========================================================
 %       Purpose : Compute the zeros of Laguerre polynomial Ln(x)
-%                 in the interval[0,ì], and the corresponding
+%                 in the interval[0,âˆž], and the corresponding
 %                 weighting coefficients for Gauss-Laguerre
 %                 integration
 %       Input :   n    --- Order of the Laguerre polynomial

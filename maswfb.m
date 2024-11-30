@@ -15,7 +15,7 @@ function maswfb
 %     Input :  m  --- Mode parameter,  m = 0,1,2,...
 %     n  --- Mode parameter,  n = m,m+1,...
 %     c  --- Spheroidal parameter
-%     x  --- Argument of angular function, |x| ó 1.0
+%     x  --- Argument of angular function, |x| â‰¤ 1.0
 %     KD --- Function code
 %     KD=1 for prolate;  KD=-1 for oblate
 %     cv --- Characteristic value

@@ -14,7 +14,7 @@ function mcikvb
 %                order and complex argument using subroutine CIKVB
 %       Input :  z --- Complex argument z
 %                v --- Real order of Iv(z)and Kv(z)
-%(v = n+v0,  0 ó n ó 250, 0 ó v0 < 1)
+%(v = n+v0,  0 â‰¤ n â‰¤ 250, 0 â‰¤ v0 < 1)
 %       Output:  CBI(n)--- In+v0(z)
 %                CDI(n)--- In+v0'(z)
 %                CBK(n)--- Kn+v0(z)
@@ -82,7 +82,7 @@ function [v,z,vm,cbi,cdi,cbk,cdk]=cikvb(v,z,vm,cbi,cdi,cbk,cdk,varargin);
 %                complex argument
 %       Input :  z --- Complex argument z
 %                v --- Real order of Iv(z)and Kv(z)
-%(v =n+v0, n = 0,1,2,..., 0 ó v0 < 1)
+%(v =n+v0, n = 0,1,2,..., 0 â‰¤ v0 < 1)
 %       Output:  CBI(n)--- In+v0(z)
 %                CDI(n)--- In+v0'(z)
 %                CBK(n)--- Kn+v0(z)
@@ -235,10 +235,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %       ==================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%       Output:  GA --- Î“(x)
 %       ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

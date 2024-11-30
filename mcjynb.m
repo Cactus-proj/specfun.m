@@ -14,7 +14,7 @@ function mcjynb
 %                subroutine CJYNB
 %       Input :  z --- Complex argument of Jn(z)and Yn(z)
 %                n --- Order of Jn(z)and Yn(z)
-%(n = 0,1,úúú, n ó 250)
+%(n = 0,1,Â·Â·Â·, n â‰¤ 250)
 %       Output:  CBJ(n)--- Jn(z)
 %                CDJ(n)--- Jn'(z)
 %                CBY(n)--- Yn(z)

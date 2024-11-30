@@ -17,7 +17,7 @@ function mpbdv
 %       Output:  DV(na)--- Dn+v0(x)
 %                DP(na)--- Dn+v0'(x)
 %(na = |n|, n = int(v), v0 = v-n, |v0| < 1
-%                  n = 0,ñ1,ñ2,úúú, |n| ó 100)
+%                  n = 0,Â±1,Â±2,Â·Â·Â·, |n| â‰¤ 100)
 %                PDF --- Dv(x)
 %                PDD --- Dv'(x)
 %       Example: v = 5.5,  x =10.0,  v0 = 0.5,  n = 0,1,...,5
@@ -65,7 +65,7 @@ function [v,x,dv,dp,pdf,pdd]=pbdv(v,x,dv,dp,pdf,pdd,varargin);
 %       Output:  DV(na)--- Dn+v0(x)
 %                DP(na)--- Dn+v0'(x)
 %(na = |n|, v0 = v-n, |v0| < 1,
-%                  n = 0,ñ1,ñ2,úúú)
+%                  n = 0,Â±1,Â±2,Â·Â·Â·)
 %                PDF --- Dv(x)
 %                PDD --- Dv'(x)
 %       Routines called:
@@ -174,7 +174,7 @@ function [va,x,pd]=dvsa(va,x,pd,varargin);
 %       Input:   x  --- Argument
 %                va --- Order
 %       Output:  PD --- Dv(x)
-%       Routine called: GAMMA for computing â(x)
+%       Routine called: GAMMA for computing Î“(x)
 %       ===================================================
 va0=[];ga0=[];g1=[];vt=[];g0=[];vm=[];gm=[];
 eps=1.0d-15;
@@ -221,7 +221,7 @@ function [va,x,pd]=dvla(va,x,pd,varargin);
 %       Output:  PD --- Dv(x)
 %       Routines called:
 %(1)VVLA for computing Vv(x)for large |x|
-%(2)GAMMA for computing â(x)
+%(2)GAMMA for computing Î“(x)
 %       ====================================================
 x1=[];vl=[];gl=[];
 pi=3.141592653589793d0;
@@ -253,7 +253,7 @@ function [va,x,pv]=vvla(va,x,pv,varargin);
 %       Output:  PV --- Vv(x)
 %       Routines called:
 %(1)DVLA for computing Dv(x)for large |x|
-%(2)GAMMA for computing â(x)
+%(2)GAMMA for computing Î“(x)
 %       ===================================================
 x1=[];pdl=[];gl=[];
 pi=3.141592653589793d0;
@@ -279,10 +279,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %       ==================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%       Output:  GA --- Î“(x)
 %       ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

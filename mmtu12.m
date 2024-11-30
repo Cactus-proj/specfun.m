@@ -88,7 +88,7 @@ function [kf,kc,m,q,x,f1r,d1r,f2r,d2r]=mtu12(kf,kc,m,q,x,f1r,d1r,f2r,d2r,varargi
 %     KC=3 for computing both the first
 %     and second kinds
 %     m  --- Order of Mathieu functions
-%     q  --- Parameter of Mathieu functions(q ò 0)
+%     q  --- Parameter of Mathieu functions(q â‰¥ 0)
 %     x  --- Argument of Mathieu functions
 %     Output:  F1R --- Mcm(1,x,q)or Msm(1,x,q)
 %     D1R --- Derivative of Mcm(1,x,q)or Msm(1,x,q)
@@ -491,9 +491,9 @@ function [kd,m,q,a]=cva2(kd,m,q,a,varargin);
 %(2)CV0 for finding initial characteristic
 %     values using polynomial approximation
 %(3)CVQM for computing initial characteristic
-%     values for q ó 3*m
+%     values for q â‰¤ 3*m
 %(3)CVQL for computing initial characteristic
-%     values for q ò m*m
+%     values for q â‰¥ m*m
 %     ======================================================
 %
 %
@@ -710,16 +710,16 @@ function [kd,m,q,a0]=cv0(kd,m,q,a0,varargin);
 %
 %     =====================================================
 %     Purpose: Compute the initial characteristic value of
-%     Mathieu functions for m ó 12  or q ó 300 or
-%     q ò m*m
+%     Mathieu functions for m â‰¤ 12  or q â‰¤ 300 or
+%     q â‰¥ m*m
 %     Input :  m  --- Order of Mathieu functions
 %     q  --- Parameter of Mathieu functions
 %     Output:  A0 --- Characteristic value
 %     Routines called:
 %(1)CVQM for computing initial characteristic
-%     value for q ó 3*m
+%     value for q â‰¤ 3*m
 %(2)CVQL for computing initial characteristic
-%     value for q ò m*m
+%     value for q â‰¥ m*m
 %     ====================================================
 %
 %
@@ -848,7 +848,7 @@ function [kd,m,q,a0]=cvql(kd,m,q,a0,varargin);
 %
 %     ========================================================
 %     Purpose: Compute the characteristic value of Mathieu
-%     functions  for q ò 3m
+%     functions  for q â‰¥ 3m
 %     Input :  m  --- Order of Mathieu functions
 %     q  --- Parameter of Mathieu functions
 %     Output:  A0 --- Initial characteristic value
@@ -898,7 +898,7 @@ function [m,q,a0]=cvqm(m,q,a0,varargin);
 %
 %     =====================================================
 %     Purpose: Compute the characteristic value of Mathieu
-%     functions for q ó m*m
+%     functions for q â‰¤ m*m
 %     Input :  m  --- Order of Mathieu functions
 %     q  --- Parameter of Mathieu functions
 %     Output:  A0 --- Initial characteristic value
@@ -921,7 +921,7 @@ function [n,x,nm,bj,dj,by,dy]=jynb(n,x,nm,bj,dj,by,dy,varargin);
 %     =====================================================
 %     Purpose: Compute Bessel functions Jn(x), Yn(x)and
 %     their derivatives
-%     Input :  x --- Argument of Jn(x)and Yn(x,x ò 0)
+%     Input :  x --- Argument of Jn(x)and Yn(x,x â‰¥ 0)
 %     n --- Order of Jn(x)and Yn(x)
 %     Output:  BJ(n)--- Jn(x)
 %     DJ(n)--- Jn'(x)

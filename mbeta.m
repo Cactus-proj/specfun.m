@@ -40,7 +40,7 @@ function [p,q,bt]=beta(p,q,bt,varargin);
 %       Input :  p  --- Parameter(p > 0)
 %                q  --- Parameter(q > 0)
 %       Output:  BT --- B(p,q)
-%       Routine called: GAMMA for computing â(x)
+%       Routine called: GAMMA for computing Î“(x)
 %       ==========================================
 gp=[];gq=[];ppq=[];gpq=[];
 [p,gp]=gamma(p,gp);
@@ -52,10 +52,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %       ==================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%       Output:  GA --- Î“(x)
 %       ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

@@ -11,7 +11,7 @@ function mstvh1
 %       =====================================================
 %       Purpose: This program computes Struve function
 %                H1(x)using subroutine STVH1
-%       Input :  x   --- Argument of H1(x,x ò 0)
+%       Input :  x   --- Argument of H1(x,x â‰¥ 0)
 %       Output:  SH1 --- H1(x)
 %       Example:
 %                   x          H1(x)
@@ -36,7 +36,7 @@ end
 function [x,sh1]=stvh1(x,sh1,varargin);
 %       =============================================
 %       Purpose: Compute Struve function H1(x)
-%       Input :  x   --- Argument of H1(x,x ò 0)
+%       Input :  x   --- Argument of H1(x,x â‰¥ 0)
 %       Output:  SH1 --- H1(x)
 %       =============================================
 pi=3.141592653589793d0;

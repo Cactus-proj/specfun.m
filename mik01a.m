@@ -12,7 +12,7 @@ function mik01a
 %       Purpose: This program computes the modified Bessel functions
 %                I0(x), I1(x), K0(x), K1(x), and their derivatives
 %                using subroutine IK01A
-%       Input :  x   --- Argument(x ò 0)
+%       Input :  x   --- Argument(x â‰¥ 0)
 %       Output:  BI0 --- I0(x)
 %                DI0 --- I0'(x)
 %                BI1 --- I1(x)
@@ -59,7 +59,7 @@ function [x,bi0,di0,bi1,di1,bk0,dk0,bk1,dk1]=ik01a(x,bi0,di0,bi1,di1,bk0,dk0,bk1
 %       =========================================================
 %       Purpose: Compute modified Bessel functions I0(x), I1(1),
 %                K0(x)and K1(x), and their derivatives
-%       Input :  x   --- Argument(x ò 0)
+%       Input :  x   --- Argument(x â‰¥ 0)
 %       Output:  BI0 --- I0(x)
 %                DI0 --- I0'(x)
 %                BI1 --- I1(x)

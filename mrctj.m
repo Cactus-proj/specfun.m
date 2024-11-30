@@ -13,11 +13,11 @@ function mrctj
 %                functions of the first kind, and their
 %                derivatives using subroutine RCTJ
 %       Input:   x --- Argument of Riccati-Bessel function
-%                n --- Order of jn(x,0 ó n ó 250)
-%       Output:  RJ(n)--- xújn(x)
-%                DJ(n)---[xújn(x)]'
+%                n --- Order of jn(x,0 â‰¤ n â‰¤ 250)
+%       Output:  RJ(n)--- xÂ·jn(x)
+%                DJ(n)---[xÂ·jn(x)]'
 %       Example: x = 10.0
-%                  n        xújn(x)[xújn(x)]'
+%                  n        xÂ·jn(x)[xÂ·jn(x)]'
 %                --------------------------------------------
 %                  0    -.5440211109D+00    -.8390715291D+00
 %                  1     .7846694180D+00    -.6224880527D+00
@@ -44,7 +44,7 @@ end;
 fprintf(1,'%0.15g \n');
 [n,x,nm,rj,dj]=rctj(n,x,nm,rj,dj);
 fprintf(1,'%0.15g \n');
-fprintf(1,'%s \n','  n        xújn(x)[xújn(x)]''');
+fprintf(1,'%s \n','  n        xÂ·jn(x)[xÂ·jn(x)]''');
 fprintf(1,'%s \n','--------------------------------------------');
 for  k=0:ns:nm;
 fprintf(1,[repmat(' ',1,1),'%3g',repmat('%20.10g',1,2) ' \n'],k,rj(k+1),dj(k+1));
@@ -58,8 +58,8 @@ function [n,x,nm,rj,dj]=rctj(n,x,nm,rj,dj,varargin);
 %                kind and their derivatives
 %       Input:   x --- Argument of Riccati-Bessel function
 %                n --- Order of jn(x,n = 0,1,2,...)
-%       Output:  RJ(n)--- xújn(x)
-%                DJ(n)---[xújn(x)]'
+%       Output:  RJ(n)--- xÂ·jn(x)
+%                DJ(n)---[xÂ·jn(x)]'
 %                NM --- Highest order computed
 %       Routines called:
 %                MSTA1 and MSTA2 for computing the starting

@@ -152,10 +152,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %     ==================================================
-%     Purpose: Compute gamma function ג(x)
-%     Input :  x  --- Argument of ג(x)
-%(x is not equal to 0,-1,-2,תתת)
-%     Output:  GA --- ג(x)
+%     Purpose: Compute gamma function ־“(x)
+%     Input :  x  --- Argument of ־“(x)
+%(x is not equal to 0,-1,-2,ֲ·ֲ·ֲ·)
+%     Output:  GA --- ־“(x)
 %     ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

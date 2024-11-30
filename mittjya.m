@@ -11,10 +11,10 @@ function mittjya
 %       ===========================================================
 %       Purpose: This program computes the integral of[1-J0(t)]/t
 %                with respect to t from 0 to x and Y0(t)/t with
-%                respect to t from x to ì using subroutine ITTJYA
-%       Input :  x   --- Variable in the limits(x ò 0)
+%                respect to t from x to âˆž using subroutine ITTJYA
+%       Input :  x   --- Variable in the limits(x â‰¥ 0)
 %       Output:  TTJ --- Integration of[1-J0(t)]/t from 0 to x
-%                TTY --- Integration of Y0(t)/t from x to ì
+%                TTY --- Integration of Y0(t)/t from x to âˆž
 %       Example:
 %                  x[1-J0(t)]/tdt       Y0(t)/tdt
 %               -------------------------------------------
@@ -40,10 +40,10 @@ end
 function [x,ttj,tty]=ittjya(x,ttj,tty,varargin);
 %       =========================================================
 %       Purpose: Integrate[1-J0(t)]/t with respect to t from 0
-%                to x, and Y0(t)/t with respect to t from x to ì
-%       Input :  x   --- Variable in the limits(x ò 0)
+%                to x, and Y0(t)/t with respect to t from x to âˆž
+%       Input :  x   --- Variable in the limits(x â‰¥ 0)
 %       Output:  TTJ --- Integration of[1-J0(t)]/t from 0 to x
-%                TTY --- Integration of Y0(t)/t from x to ì
+%                TTY --- Integration of Y0(t)/t from x to âˆž
 %       =========================================================
 pi=3.141592653589793d0;
 el=.5772156649015329d0;

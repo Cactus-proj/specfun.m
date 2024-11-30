@@ -13,7 +13,7 @@ function msphi
 %                Bessel functions of the first kind in(x)and
 %                in'(x)using subroutine SPHI
 %       Input :  x --- Argument of in(x)
-%                n --- Order of in(x,0 ó n ó 250)
+%                n --- Order of in(x,0 â‰¤ n â‰¤ 250)
 %       Output:  SI(n)--- in(x)
 %                DI(n)--- in'(x)
 %       Example: x = 10.0

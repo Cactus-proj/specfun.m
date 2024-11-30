@@ -14,10 +14,10 @@ function mrcty
 %                derivatives using subroutine RCTY
 %       Input:   x --- Argument of Riccati-Bessel function
 %                n --- Order of yn(x)
-%       Output:  RY(n)--- x鷜n(x)
-%                DY(n)---[x鷜n(x)]'
+%       Output:  RY(n)--- x路yn(x)
+%                DY(n)---[x路yn(x)]'
 %       Example: x = 10.0
-%                  n        x鷜n(x)[x鷜n(x)]'
+%                  n        x路yn(x)[x路yn(x)]'
 %                --------------------------------------------
 %                  0     .8390715291D+00    -.5440211109D+00
 %                  1     .6279282638D+00     .7762787027D+00
@@ -44,7 +44,7 @@ end;
 fprintf(1,'%0.15g \n');
 [n,x,nm,ry,dy]=rcty(n,x,nm,ry,dy);
 fprintf(1,'%0.15g \n');
-fprintf(1,'%s \n','  n        x鷜n(x)[x鷜n(x)]''');
+fprintf(1,'%s \n','  n        x路yn(x)[x路yn(x)]''');
 fprintf(1,'%s \n','--------------------------------------------');
 for  k=0:ns:nm;
 fprintf(1,[repmat(' ',1,1),'%3g',repmat('%20.10g',1,2) ' \n'],k,ry(k+1),dy(k+1));
@@ -58,8 +58,8 @@ function [n,x,nm,ry,dy]=rcty(n,x,nm,ry,dy,varargin);
 %                kind and their derivatives
 %       Input:   x --- Argument of Riccati-Bessel function
 %                n --- Order of yn(x)
-%       Output:  RY(n)--- x鷜n(x)
-%                DY(n)---[x鷜n(x)]'
+%       Output:  RY(n)--- x路yn(x)
+%                DY(n)---[x路yn(x)]'
 %                NM --- Highest order computed
 %       ========================================================
 nm=fix(fix(n));

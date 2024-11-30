@@ -62,7 +62,7 @@ function [n,z,cpb,cpd]=cpbdn(n,z,cpb,cpd,varargin);
 %       Purpose: Compute the parabolic cylinder functions
 %       Dn(z)and Dn'(z)for a complex argument
 %       Input:   z --- Complex argument of Dn(z)
-%       n --- Order of Dn(z,n=0,ñ1,ñ2,úúú)
+%       n --- Order of Dn(z,n=0,Â±1,Â±2,Â·Â·Â·)
 %       Output:  CPB(|n|)--- Dn(z)
 %       CPD(|n|)--- Dn'(z)
 %       Routines called:
@@ -203,7 +203,7 @@ function [n,z,cdn]=cpdla(n,z,cdn,varargin);
 %       Purpose: Compute complex parabolic cylinder function Dn(z)
 %       for large argument
 %       Input:   z   --- Complex argument of Dn(z)
-%       n   --- Order of Dn(z,n = 0,ñ1,ñ2,úúú)
+%       n   --- Order of Dn(z,n = 0,Â±1,Â±2,Â·Â·Â·)
 %       Output:  CDN --- Dn(z)
 %       ===========================================================
 cb0=z.^fix(n).*exp(-.25d0.*z.*z);
@@ -219,9 +219,9 @@ return;
 end
 function [x,ga]=gaih(x,ga,varargin);
 %       =====================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x), x = n/2, n=1,2,úúú
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x), x = n/2, n=1,2,Â·Â·Â·
+%       Output:  GA --- Î“(x)
 %       =====================================================
 pi=3.141592653589793d0;
 if(x == fix(x)&x > 0.0);

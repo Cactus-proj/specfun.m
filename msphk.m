@@ -12,8 +12,8 @@ function msphk
 %       Purpose: This program computes the modified spherical
 %                Bessel functions kn(x)and kn'(x)using
 %                subroutine SPHK
-%       Input :  x --- Argument of kn(x,x ò 0)
-%                n --- Order of kn(x,n ó 250)
+%       Input :  x --- Argument of kn(x,x â‰¥ 0)
+%                n --- Order of kn(x,n â‰¤ 250)
 %       Output:  SK(n)--- kn(x)
 %                DK(n)--- kn'(x)
 %       Example: x= 10.0
@@ -55,7 +55,7 @@ function [n,x,nm,sk,dk]=sphk(n,x,nm,sk,dk,varargin);
 %       =====================================================
 %       Purpose: Compute modified spherical Bessel functions
 %                of the second kind, kn(x)and kn'(x)
-%       Input :  x --- Argument of kn(x,x ò 0)
+%       Input :  x --- Argument of kn(x,x â‰¥ 0)
 %                n --- Order of kn(x,n = 0,1,2,...)
 %       Output:  SK(n)--- kn(x)
 %                DK(n)--- kn'(x)

@@ -14,7 +14,7 @@ function mchgu
 %     subroutine CHGU
 %     Input  : a  --- Parameter
 %     b  --- Parameter
-%     x  --- Argument(x ò 0)
+%     x  --- Argument(x â‰¥ 0)
 %     Output:  HU --- U(a,b,x)
 %     MD --- Method code
 %     Example:
@@ -211,14 +211,14 @@ end
 function [a,b,x,hu,id]=chgubi(a,b,x,hu,id,varargin);
 %     ======================================================
 %     Purpose: Compute confluent hypergeometric function
-%     U(a,b,x)with integer b(b = ñ1,ñ2,...)
+%     U(a,b,x)with integer b(b = Â±1,Â±2,...)
 %     Input  : a  --- Parameter
 %     b  --- Parameter
 %     x  --- Argument
 %     Output:  HU --- U(a,b,x)
 %     ID --- Estimated number of significant digits
 %     Routines called:
-%(1)GAMMA for computing gamma function â(x)
+%(1)GAMMA for computing gamma function Î“(x)
 %(2)PSI for computing psi function
 %     ======================================================
 ps=[];ga=[];a1=[];ga1=[];
@@ -329,7 +329,7 @@ function [a,b,x,hu,id]=chguit(a,b,x,hu,id,varargin);
 %     x  --- Argument(x > 0)
 %     Output:  HU --- U(a,b,z)
 %     ID --- Estimated number of significant digits
-%     Routine called: GAMMA for computing â(x)
+%     Routine called: GAMMA for computing Î“(x)
 %     ======================================================
 ga=[];
  t=zeros(1,30);
@@ -389,10 +389,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %     ==================================================
-%     Purpose: Compute gamma function â(x)
-%     Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%     Output:  GA --- â(x)
+%     Purpose: Compute gamma function Î“(x)
+%     Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%     Output:  GA --- Î“(x)
 %     ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

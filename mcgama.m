@@ -9,24 +9,24 @@ function mcgama
 %
 
 %     ==========================================================
-%     Purpose: This program computes the gamma function â(z)
-%     or ln[â(z)]for a complex argument using
+%     Purpose: This program computes the gamma function Î“(z)
+%     or ln[Î“(z)]for a complex argument using
 %     subroutine CGAMA
 %     Input :  x  --- Real part of z
 %     y  --- Imaginary part of z
 %     KF --- Function code
-%     KF=0 for ln[â(z)]
-%     KF=1 for â(z)
-%     Output:  GR --- Real part of ln[â(z)]or â(z)
-%     GI --- Imaginary part of ln[â(z)]or â(z)
+%     KF=0 for ln[Î“(z)]
+%     KF=1 for Î“(z)
+%     Output:  GR --- Real part of ln[Î“(z)]or Î“(z)
+%     GI --- Imaginary part of ln[Î“(z)]or Î“(z)
 %     Examples:
-%     x         y           Re[â(z)]Im[â(z)]
+%     x         y           Re[Î“(z)]Im[Î“(z)]
 %     --------------------------------------------------------
 %     2.50      5.00     .2267360319D-01    -.1172284404D-01
 %     5.00     10.00     .1327696517D-01     .3639011746D-02
 %     2.50     -5.00     .2267360319D-01     .1172284404D-01
 %     5.00    -10.00     .1327696517D-01    -.3639011746D-02
-%     x         y          Re[lnâ(z)]Im[lnâ(z)]
+%     x         y          Re[lnÎ“(z)]Im[lnÎ“(z)]
 %     ---------------------------------------------------------
 %     2.50      5.00    -.3668103262D+01     .5806009801D+01
 %     5.00     10.00    -.4285507444D+01     .1911707090D+02
@@ -45,9 +45,9 @@ x=2.5;
 y=5.0;
 fprintf(1,'%0.15g \n');
 if(kf == 1);
-fprintf(1,'%s ','       x         y           re[â(z)]');fprintf(1,'%s \n', '           im[â(z)]');
+fprintf(1,'%s ','       x         y           re[Î“(z)]');fprintf(1,'%s \n', '           im[Î“(z)]');
 else;
-fprintf(1,'%s ','       x         y          re[lnâ(z)]');fprintf(1,'%s \n', '         im[lnâ(z)]');
+fprintf(1,'%s ','       x         y          re[lnÎ“(z)]');fprintf(1,'%s \n', '         im[lnÎ“(z)]');
 end;
 fprintf(1,'%s ','    ------------------------------------');fprintf(1,'%s \n', '---------------------');
 [x,y,kf,gr,gi]=cgama(x,y,kf,gr,gi);
@@ -56,15 +56,15 @@ fprintf(1,[repmat(' ',1,1),repmat('%10.2g',1,2),repmat('%20.10g',1,2) ' \n'],x,y
 end
 function [x,y,kf,gr,gi]=cgama(x,y,kf,gr,gi,varargin);
 %     =========================================================
-%     Purpose: Compute the gamma function â(z)or ln[â(z)]
+%     Purpose: Compute the gamma function Î“(z)or ln[Î“(z)]
 %     for a complex argument
 %     Input :  x  --- Real part of z
 %     y  --- Imaginary part of z
 %     KF --- Function code
-%     KF=0 for ln[â(z)]
-%     KF=1 for â(z)
-%     Output:  GR --- Real part of ln[â(z)]or â(z)
-%     GI --- Imaginary part of ln[â(z)]or â(z)
+%     KF=0 for ln[Î“(z)]
+%     KF=1 for Î“(z)
+%     Output:  GR --- Real part of ln[Î“(z)]or Î“(z)
+%     GI --- Imaginary part of ln[Î“(z)]or Î“(z)
 %     ========================================================
  a=zeros(1,10);
 x1=0.0;

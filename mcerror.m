@@ -12,7 +12,7 @@ function mcerror
 %       Purpose: This program computes the error function erf(z)
 %                for a complex argument using subroutine CERROR
 %       Input :  x   --- Real part of z
-%                y   --- Imaginary part of z(y ó 3.0)
+%                y   --- Imaginary part of z(y â‰¤ 3.0)
 %       Output:  ERR --- Real part of erf(z)
 %                ERI --- Imaginary part of erf(z)
 %       Example:

@@ -12,8 +12,8 @@ function mstvlv
 %       Purpose:  This program computes the modified Struve
 %                 function Lv(x)for an arbitrary order v
 %                 using subroutine STVLV
-%       Input :   v   --- Order of Lv(x,|v| ó 20)
-%                 x   --- Argument of Lv(x,x ò 0)
+%       Input :   v   --- Order of Lv(x,|v| â‰¤ 20)
+%                 x   --- Argument of Lv(x,x â‰¥ 0)
 %       Output:   SLV --- Lv(x)
 %       Example:  x = 10.0
 %                   v          Lv(x)
@@ -43,8 +43,8 @@ function [v,x,slv]=stvlv(v,x,slv,varargin);
 %       ======================================================
 %       Purpose:  Compute modified Struve function Lv(x)with
 %                 an arbitrary order v
-%       Input :   v   --- Order of Lv(x,|v| ó 20)
-%                 x   --- Argument of Lv(x,x ò 0)
+%       Input :   v   --- Order of Lv(x,|v| â‰¤ 20)
+%                 x   --- Argument of Lv(x,x â‰¥ 0)
 %       Output:   SLV --- Lv(x)
 %       Routine called: GAMMA to compute the gamma function
 %       ======================================================
@@ -120,10 +120,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %       ==================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%       Output:  GA --- Î“(x)
 %       ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

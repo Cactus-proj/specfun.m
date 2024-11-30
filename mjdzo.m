@@ -12,7 +12,7 @@ function mjdzo
 %     Purpose: This program computes the zeros of Bessel functions
 %     Jn(x)and Jn'(x), and arranges them in the order
 %     of their values
-%     Input :  NT    --- Number of total zeros(NT ó 1200)
+%     Input :  NT    --- Number of total zeros(NT â‰¤ 1200)
 %     Output:  ZO(L)--- Value of the L-th zero of Jn(x)and
 %     Jn'(x)
 %     N(L)--- n, order of Jn(x)or Jn'(x)associated
@@ -65,7 +65,7 @@ function [nt,n,m,p,zo]=jdzo(nt,n,m,p,zo,varargin);
 %     Purpose: Compute the zeros of Bessel functions Jn(x)and
 %     Jn'(x), and arrange them in the order of their
 %     magnitudes
-%     Input :  NT    --- Number of total zeros(NT ó 1200)
+%     Input :  NT    --- Number of total zeros(NT â‰¤ 1200)
 %     Output:  ZO(L)--- Value of the L-th zero of Jn(x)
 %     and Jn'(x)
 %     N(L)--- n, order of Jn(x)or Jn'(x)associated
@@ -192,8 +192,8 @@ end
 function [n,x,bj,dj,fj]=bjndd(n,x,bj,dj,fj,varargin);
 %     =====================================================
 %     Purpose: Compute Bessel functions Jn(x)and their
-%     first and second derivatives(n= 0,1,úúú)
-%     Input:   x ---  Argument of Jn(x,x ò 0)
+%     first and second derivatives(n= 0,1,Â·Â·Â·)
+%     Input:   x ---  Argument of Jn(x,x â‰¥ 0)
 %     n ---  Order of Jn(x)
 %     Output:  BJ(n+1)---  Jn(x)
 %     DJ(n+1)---  Jn'(x)

@@ -10,15 +10,15 @@ function mincog
 
 %       ==========================================================
 %       Purpose: This program computes the incomplete gamma
-%                function r(a,x), â(a,x)and P(a,x)using
+%                function r(a,x), Î“(a,x)and P(a,x)using
 %                subroutine INCOG
 %       Input :  a   --- Parameter
 %                x   --- Argument
 %       Output:  GIN --- r(a,x)
-%                GIM --- â(a,x)
+%                GIM --- Î“(a,x)
 %                GIP --- P(a,x)
 %       Example:
-%            a     x      r(a,x)â(a,x)P(a,x)
+%            a     x      r(a,x)Î“(a,x)P(a,x)
 %           -------------------------------------------------------
 %           3.0   5.0  .17506960D+01  .24930404D+00  .87534798D+00
 %       ===========================================================
@@ -42,13 +42,13 @@ end
 function [a,x,gin,gim,gip]=incog(a,x,gin,gim,gip,varargin);
 %       ===================================================
 %       Purpose: Compute the incomplete gamma function
-%                r(a,x), â(a,x)and P(a,x)
-%       Input :  a   --- Parameter(a ó 170)
+%                r(a,x), Î“(a,x)and P(a,x)
+%       Input :  a   --- Parameter(a â‰¤ 170)
 %                x   --- Argument
 %       Output:  GIN --- r(a,x)
-%                GIM --- â(a,x)
+%                GIM --- Î“(a,x)
 %                GIP --- P(a,x)
-%       Routine called: GAMMA for computing â(x)
+%       Routine called: GAMMA for computing Î“(x)
 %       ===================================================
 ga=[];
 xam=-x+a.*log(x);
@@ -86,10 +86,10 @@ end;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %       ==================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%       Output:  GA --- Î“(x)
 %       ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

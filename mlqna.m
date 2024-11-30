@@ -11,8 +11,8 @@ function mlqna
 %       ======================================================
 %       Purpose: This program computes the Legendre functions
 %                Qn(x)and Qn'(x)using subroutine LQNA
-%       Input :  x  --- Argument of Qn(x,-1 ó x ó 1)
-%                n  --- Degree of Qn(x,n = 0,1,úúú)
+%       Input :  x  --- Argument of Qn(x,-1 â‰¤ x â‰¤ 1)
+%                n  --- Degree of Qn(x,n = 0,1,Â·Â·Â·)
 %       Output:  QN(n)--- Qn(x)
 %                QD(n)--- Qn'(x)
 %       Example:  x = 0.50
@@ -49,8 +49,8 @@ end
 function [n,x,qn,qd]=lqna(n,x,qn,qd,varargin);
 %       =====================================================
 %       Purpose: Compute Legendre functions Qn(x)and Qn'(x)
-%       Input :  x  --- Argument of Qn(x,-1 ó x ó 1)
-%                n  --- Degree of Qn(x,n = 0,1,2,úúú)
+%       Input :  x  --- Argument of Qn(x,-1 â‰¤ x â‰¤ 1)
+%                n  --- Degree of Qn(x,n = 0,1,2,Â·Â·Â·)
 %       Output:  QN(n)--- Qn(x)
 %                QD(n)--- Qn'(x)
 %(1.0D+300 stands for infinity)

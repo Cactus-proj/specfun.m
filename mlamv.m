@@ -14,7 +14,7 @@ function mlamv
 %                using subroutine LAMV
 %       Input :  x --- Argument of lambda function
 %                v --- Order of lambda function
-%(v = n+v0, 0 ó n ó 250, 0 ó v0 < 1)
+%(v = n+v0, 0 â‰¤ n â‰¤ 250, 0 â‰¤ v0 < 1)
 %       Output:  VL(n)--- Lambda function of order n+v0
 %                DL(n)--- Derivative of lambda function
 %       Example: x = 10.0
@@ -71,7 +71,7 @@ function [v,x,vm,vl,dl]=lamv(v,x,vm,vl,dl,varargin);
 %       Routines called:
 %(1)MSTA1 and MSTA2 for computing the starting
 %                point for backward recurrence
-%(2)GAM0 for computing gamma function(|x| ó 1)
+%(2)GAM0 for computing gamma function(|x| â‰¤ 1)
 %       =========================================================
 v0=[];ga=[];
 pi=3.141592653589793d0;
@@ -190,9 +190,9 @@ return;
 end
 function [x,ga]=gam0(x,ga,varargin);
 %       ================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x,|x| ó 1)
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x,|x| â‰¤ 1)
+%       Output:  GA --- Î“(x)
 %       ================================================
  g=zeros(1,25);
 g(:)=[1.0d0,0.5772156649015329d0,-0.6558780715202538d0,-0.420026350340952d-1,0.1665386113822915d0,-.421977345555443d-1,-.96219715278770d-2,.72189432466630d-2,-.11651675918591d-2,-.2152416741149d-3,.1280502823882d-3,-.201348547807d-4,-.12504934821d-5,.11330272320d-5,-.2056338417d-6,.61160950d-8,.50020075d-8,-.11812746d-8,.1043427d-9,.77823d-11,-.36968d-11,.51d-12,-.206d-13,-.54d-14,.14d-14];

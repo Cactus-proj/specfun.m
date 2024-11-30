@@ -13,7 +13,7 @@ function mlpmv
 %                function Pmv(x)with an integer order and an
 %                arbitrary nonnegative degree using subroutine
 %                LPMV
-%       Input :  x   --- Argument of Pm(x,-1 ó x ó 1)
+%       Input :  x   --- Argument of Pm(x,-1 â‰¤ x â‰¤ 1)
 %                m   --- Order of Pmv(x)
 %                v   --- Degree of Pmv(x)
 %       Output:  PMV --- Pmv(x)
@@ -48,7 +48,7 @@ function [v,m,x,pmv]=lpmv(v,m,x,pmv,varargin);
 %       Purpose: Compute the associated Legendre function
 %                Pmv(x)with an integer order and an arbitrary
 %                nonnegative degree v
-%       Input :  x   --- Argument of Pm(x,-1 ó x ó 1)
+%       Input :  x   --- Argument of Pm(x,-1 â‰¤ x â‰¤ 1)
 %                m   --- Order of Pmv(x)
 %                v   --- Degree of Pmv(x)
 %       Output:  PMV --- Pmv(x)

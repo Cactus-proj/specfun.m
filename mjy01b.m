@@ -12,7 +12,7 @@ function mjy01b
 %       Purpose: This program computes Bessel functions Jn(x)
 %                and Yn(x,n=0,1)and their derivatives
 %                using subroutine JY01B
-%       Input :  x   --- Argument of Jn(x)& Yn(x,x ò 0)
+%       Input :  x   --- Argument of Jn(x)& Yn(x,x â‰¥ 0)
 %       Output:  BJ0 --- J0(x)
 %                DJ0 --- J0'(x)
 %                BJ1 --- J1(x)
@@ -61,7 +61,7 @@ function [x,bj0,dj0,bj1,dj1,by0,dy0,by1,dy1]=jy01b(x,bj0,dj0,bj1,dj1,by0,dy0,by1
 %       =======================================================
 %       Purpose: Compute Bessel functions J0(x), J1(x), Y0(x),
 %                Y1(x), and their derivatives
-%       Input :  x   --- Argument of Jn(x)& Yn(x,x ò 0)
+%       Input :  x   --- Argument of Jn(x)& Yn(x,x â‰¥ 0)
 %       Output:  BJ0 --- J0(x)
 %                DJ0 --- J0'(x)
 %                BJ1 --- J1(x)

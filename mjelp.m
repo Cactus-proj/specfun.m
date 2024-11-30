@@ -12,7 +12,7 @@ function mjelp
 %       Purpose: This program computes Jacobian elliptic functions
 %                sn u, cn u and dn u using subroutine JELP
 %       Input  : u   --- Argument of Jacobian elliptic fuctions
-%                Hk  --- Modulus k(0 ó k ó 1)
+%                Hk  --- Modulus k(0 â‰¤ k â‰¤ 1)
 %       Output : ESN --- sn u
 %                ECN --- cn u
 %                EDN --- dn u
@@ -44,7 +44,7 @@ function [u,hk,esn,ecn,edn,eph]=jelp(u,hk,esn,ecn,edn,eph,varargin);
 %       Purpose: Compute Jacobian elliptic functions sn u, cn u
 %                and dn u
 %       Input  : u   --- Argument of Jacobian elliptic fuctions
-%                Hk  --- Modulus k(0 ó k ó 1)
+%                Hk  --- Modulus k(0 â‰¤ k â‰¤ 1)
 %       Output : ESN --- sn u
 %                ECN --- cn u
 %                EDN --- dn u

@@ -12,7 +12,7 @@ function mitsh0
 %       Purpose: This program evaluates the integral of
 %                Struve function H0(t)with respect to t
 %                from 0 and x using subroutine ITSH0
-%       Input :  x   --- Upper limit(x ò 0)
+%       Input :  x   --- Upper limit(x â‰¥ 0)
 %       Output:  TH0 --- Integration of H0(t)from 0 and x
 %       Example:
 %                    x        H0(t)dt
@@ -31,7 +31,7 @@ fprintf(1,'%s \n','please enter x ');
 %        READ(*,*)X
 x=50.0;
 fprintf(1,'%s \n','   x         h0(t)dt');
-fprintf(1,'%s \n','----------------------ä');
+fprintf(1,'%s \n','----------------------Î£');
 [x,th0]=itsh0(x,th0);
 fprintf(1,[repmat(' ',1,1),'%5.1g','%16.7g' ' \n'],x,th0);
 %format(1x,f5.1,e16.7);
@@ -40,7 +40,7 @@ function [x,th0]=itsh0(x,th0,varargin);
 %       ===================================================
 %       Purpose: Evaluate the integral of Struve function
 %                H0(t)with respect to t from 0 and x
-%       Input :  x   --- Upper limit(x ò 0)
+%       Input :  x   --- Upper limit(x â‰¥ 0)
 %       Output:  TH0 --- Integration of H0(t)from 0 and x
 %       ===================================================
  a=zeros(1,25);

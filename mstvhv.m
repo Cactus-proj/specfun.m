@@ -12,8 +12,8 @@ function mstvhv
 %       Purpose:  This program computes Struve function Hv(x)
 %                 for an arbitrary order using subroutine
 %                 STVHV
-%       Input :   v  --- Order of Hv(x,-8.0 ó v ó 12.5)
-%                 x  --- Argument of Hv(x,x ò 0)
+%       Input :   v  --- Order of Hv(x,-8.0 â‰¤ v â‰¤ 12.5)
+%                 x  --- Argument of Hv(x,x â‰¥ 0)
 %       Output:   HV --- Hv(x)
 %       Example:  x = 10.0
 %                   v           Hv(x)
@@ -43,8 +43,8 @@ function [v,x,hv]=stvhv(v,x,hv,varargin);
 %       =====================================================
 %       Purpose: Compute Struve function Hv(x)with an
 %                arbitrary order v
-%       Input :  v  --- Order of Hv(x,-8.0 ó v ó 12.5)
-%                x  --- Argument of Hv(x,x ò 0)
+%       Input :  v  --- Order of Hv(x,-8.0 â‰¤ v â‰¤ 12.5)
+%                x  --- Argument of Hv(x,x â‰¥ 0)
 %       Output:  HV --- Hv(x)
 %       Routine called: GAMMA to compute the gamma function
 %       =====================================================
@@ -135,10 +135,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %       ==================================================
-%       Purpose: Compute gamma function â(x)
-%       Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%       Output:  GA --- â(x)
+%       Purpose: Compute gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%       Output:  GA --- Î“(x)
 %       ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

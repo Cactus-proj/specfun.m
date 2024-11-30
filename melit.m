@@ -12,7 +12,7 @@ function melit
 %       Purpose: This program computes complete and incomplete
 %                elliptic integrals F(k,phi)and E(k,phi)using
 %                subroutine ELIT
-%       Input  : HK  --- Modulus k(0 ó k ó 1)
+%       Input  : HK  --- Modulus k(0 â‰¤ k â‰¤ 1)
 %                Phi --- Argument(in degrees)
 %       Output : FE  --- F(k,phi)
 %                EE  --- E(k,phi)
@@ -44,7 +44,7 @@ function [hk,phi,fe,ee]=elit(hk,phi,fe,ee,varargin);
 %       ==================================================
 %       Purpose: Compute complete and incomplete elliptic
 %                integrals F(k,phi)and E(k,phi)
-%       Input  : HK  --- Modulus k(0 ó k ó 1)
+%       Input  : HK  --- Modulus k(0 â‰¤ k â‰¤ 1)
 %                Phi --- Argument(in degrees)
 %       Output : FE  --- F(k,phi)
 %                EE  --- E(k,phi)

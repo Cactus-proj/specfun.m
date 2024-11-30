@@ -10,9 +10,9 @@ function mgamma
 
 %       ====================================================
 %       Purpose: This program computes the gamma function
-%                â(x)using subroutine GAMMA
+%                Î“(x)using subroutine GAMMA
 %       Examples:
-%                   x            â(x)
+%                   x            Î“(x)
 %                ----------------------------
 %                  1/3       2.678938534708
 %                  0.5       1.772453850906
@@ -26,7 +26,7 @@ x=[];ga=[];
  ga=0;
  a=zeros(1,5);
 a(:)=[.333333333333333333d0,0.5d0,-0.5d0,-1.5,5.0d0];
-fprintf(1,'%s \n','     x            â(x)');
+fprintf(1,'%s \n','     x            Î“(x)');
 fprintf(1,'%s \n',' ----------------------------');
 for  k=1:5;
 x=a(k);
@@ -42,10 +42,10 @@ fprintf(1,[repmat(' ',1,1),'%8.4g','%20.12g' ' \n'],x,ga);
 end
 function [x,ga]=gamma(x,ga,varargin);
 %       ==================================================
-%       Purpose: Compute the gamma function â(x)
-%       Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%       Output:  GA --- â(x)
+%       Purpose: Compute the gamma function Î“(x)
+%       Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%       Output:  GA --- Î“(x)
 %       ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

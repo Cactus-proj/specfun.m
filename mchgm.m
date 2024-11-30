@@ -48,7 +48,7 @@ function [a,b,x,hg]=chgm(a,b,x,hg,varargin);
 %     b  --- Parameter(b <> 0,-1,-2,...)
 %     x  --- Argument
 %     Output:  HG --- M(a,b,x)
-%     Routine called: GAMMA for computing â(x)
+%     Routine called: GAMMA for computing Î“(x)
 %     ===================================================
 ta=[];tb=[];xg=[];tba=[];
 pi=3.141592653589793d0;
@@ -136,10 +136,10 @@ return;
 end
 function [x,ga]=gamma(x,ga,varargin);
 %     ==================================================
-%     Purpose: Compute gamma function â(x)
-%     Input :  x  --- Argument of â(x)
-%(x is not equal to 0,-1,-2,úúú)
-%     Output:  GA --- â(x)
+%     Purpose: Compute gamma function Î“(x)
+%     Input :  x  --- Argument of Î“(x)
+%(x is not equal to 0,-1,-2,Â·Â·Â·)
+%     Output:  GA --- Î“(x)
 %     ==================================================
  g=zeros(1,26);
 pi=3.141592653589793d0;

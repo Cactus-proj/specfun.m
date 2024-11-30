@@ -11,7 +11,7 @@ function mstvl0
 %       =====================================================
 %       Purpose: This program computes modified Struve
 %                function L0(x)using subroutine STVL0
-%       Input :  x   --- Argument of L0(x,x ò 0)
+%       Input :  x   --- Argument of L0(x,x â‰¥ 0)
 %       Output:  SL0 --- L0(x)
 %       Example:
 %                   x        L0(x)
@@ -38,7 +38,7 @@ end
 function [x,sl0]=stvl0(x,sl0,varargin);
 %       ================================================
 %       Purpose: Compute modified Struve function L0(x)
-%       Input :  x   --- Argument of L0(x,x ò 0)
+%       Input :  x   --- Argument of L0(x,x â‰¥ 0)
 %       Output:  SL0 --- L0(x)
 %       ================================================
 pi=3.141592653589793d0;

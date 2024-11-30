@@ -11,10 +11,10 @@ function mittika
 %       ============================================================
 %       Purpose: This program computes the integral of[I0(t)-1]/t
 %                with respect to t from 0 to x and K0(t)/t with
-%                respect to t from x to ì using subroutine ITTIKA
-%       Input :  x   --- Variable in the limits(x ò 0)
+%                respect to t from x to âˆž using subroutine ITTIKA
+%       Input :  x   --- Variable in the limits(x â‰¥ 0)
 %       Output:  TTI --- Integration of[I0(t)-1]/t from 0 to x
-%                TTK --- Integration of K0(t)/t from x to ì
+%                TTK --- Integration of K0(t)/t from x to âˆž
 %       Example:
 %                   x[1-I0(t)]/tdt     K0(t)/tdt
 %                ---------------------------------------
@@ -40,10 +40,10 @@ end
 function [x,tti,ttk]=ittika(x,tti,ttk,varargin);
 %       =========================================================
 %       Purpose: Integrate[I0(t)-1]/t with respect to t from 0
-%                to x, and K0(t)/t with respect to t from x to ì
-%       Input :  x   --- Variable in the limits(x ò 0)
+%                to x, and K0(t)/t with respect to t from x to âˆž
+%       Input :  x   --- Variable in the limits(x â‰¥ 0)
 %       Output:  TTI --- Integration of[I0(t)-1]/t from 0 to x
-%                TTK --- Integration of K0(t)/t from x to ì
+%                TTK --- Integration of K0(t)/t from x to âˆž
 %       =========================================================
  c=zeros(1,8);
 pi=3.141592653589793d0;

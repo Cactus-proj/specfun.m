@@ -10,21 +10,21 @@ function mffk
 
 %     ==============================================================
 %     Purpose: This program computes the modified Fresnel integrals
-%     Fñ(x)and Kñ(x)using subroutine FFK
-%     Input :  x   --- Argument of Fñ(x)and Kñ(x)
+%     FÂ±(x)and KÂ±(x)using subroutine FFK
+%     Input :  x   --- Argument of FÂ±(x)and KÂ±(x)
 %     KS  --- Sign code
 %     KS=0 for calculating F+(x)and K+(x)
 %     KS=1 for calculating F_(x)and K_(x)
-%     Output:  FR  --- Re[Fñ(x)]
-%     FI  --- Im[Fñ(x)]
-%     FM  --- |Fñ(x)|
-%     FA  --- Arg[Fñ(x)](Degs.)
-%     GR  --- Re[Kñ(x)]
-%     GI  --- Im[Kñ(x)]
-%     GM  --- |Kñ(x)|
-%     GA  --- Arg[Kñ(x)](Degs.)
+%     Output:  FR  --- Re[FÂ±(x)]
+%     FI  --- Im[FÂ±(x)]
+%     FM  --- |FÂ±(x)|
+%     FA  --- Arg[FÂ±(x)](Degs.)
+%     GR  --- Re[KÂ±(x)]
+%     GI  --- Im[KÂ±(x)]
+%     GM  --- |KÂ±(x)|
+%     GA  --- Arg[KÂ±(x)](Degs.)
 %     Example:
-%     x     Re[Fñ(x)]ñIm[Fñ(x)]Mod[Fñ(x)]ñArg[Fñ(x)]
+%     x     Re[FÂ±(x)]Â±Im[FÂ±(x)]Mod[FÂ±(x)]Â±Arg[FÂ±(x)]
 %     ----------------------------------------------------------
 %     0.0    .62665707    .62665707    .88622693    45.000000
 %     2.0    .16519561   -.17811942    .24293233   -47.155835
@@ -32,7 +32,7 @@ function mffk
 %     6.0    .08245304   -.01180212    .08329342    -8.145843
 %     8.0   -.05729996    .02493542    .06249048   156.482601
 %     10.0    .02553188    .04298617    .04999688    59.291561
-%     x     Re[Kñ(x)]ñIm[Kñ(x)]Mod[Kñ(x)]ñArg[Kñ(x)]
+%     x     Re[KÂ±(x)]Â±Im[KÂ±(x)]Mod[KÂ±(x)]Â±Arg[KÂ±(x)]
 %     ----------------------------------------------------------
 %     0.0    .50000000    .00000000    .50000000     0.000000
 %     2.0    .10702394    .08562295    .13705989    38.661047
@@ -46,32 +46,32 @@ fprintf(1,'%s \n','please enter x');
 %     READ(*,*)X
 x=10.0;
 fprintf(1,'%0.15g \n');
-fprintf(1,'%s ','   x      re[fñ(x)]ñim[fñ(x)]');fprintf(1,'%s \n', 'mod[fñ(x)]ñarg[fñ(x)]');
+fprintf(1,'%s ','   x      re[fÂ±(x)]Â±im[fÂ±(x)]');fprintf(1,'%s \n', 'mod[fÂ±(x)]Â±arg[fÂ±(x)]');
 fprintf(1,'%s ',' ---------------------------------------');fprintf(1,'%s \n','-----------------------');
 [dumvar1,x,fr,fi,fm,fa,gr,gi,gm,ga]=ffk(0,x,fr,fi,fm,fa,gr,gi,gm,ga);
 fprintf(1,[repmat(' ',1,1),'%5.1g',repmat('%14.8g',1,3),'%14.6g' ' \n'],x,fr,fi,fm,fa);
 fprintf(1,'%0.15g \n');
-fprintf(1,'%s ','   x      re[kñ(x)]ñim[kñ(x)]');fprintf(1,'%s \n', 'mod[kñ(x)]ñarg[kñ(x)]');
+fprintf(1,'%s ','   x      re[kÂ±(x)]Â±im[kÂ±(x)]');fprintf(1,'%s \n', 'mod[kÂ±(x)]Â±arg[kÂ±(x)]');
 fprintf(1,'%s ',' ---------------------------------------');fprintf(1,'%s \n','-----------------------');
 fprintf(1,[repmat(' ',1,1),'%5.1g',repmat('%14.8g',1,3),'%14.6g' ' \n'],x,gr,gi,gm,ga);
 %format(1x,f5.1,3f14.8,f14.6);
 end
 function [ks,x,fr,fi,fm,fa,gr,gi,gm,ga]=ffk(ks,x,fr,fi,fm,fa,gr,gi,gm,ga,varargin);
 %     =======================================================
-%     Purpose: Compute modified Fresnel integrals Fñ(x)
-%     and Kñ(x)
-%     Input :  x   --- Argument of Fñ(x)and Kñ(x)
+%     Purpose: Compute modified Fresnel integrals FÂ±(x)
+%     and KÂ±(x)
+%     Input :  x   --- Argument of FÂ±(x)and KÂ±(x)
 %     KS  --- Sign code
 %     KS=0 for calculating F+(x)and K+(x)
 %     KS=1 for calculating F_(x)and K_(x)
-%     Output:  FR  --- Re[Fñ(x)]
-%     FI  --- Im[Fñ(x)]
-%     FM  --- |Fñ(x)|
-%     FA  --- Arg[Fñ(x)](Degs.)
-%     GR  --- Re[Kñ(x)]
-%     GI  --- Im[Kñ(x)]
-%     GM  --- |Kñ(x)|
-%     GA  --- Arg[Kñ(x)](Degs.)
+%     Output:  FR  --- Re[FÂ±(x)]
+%     FI  --- Im[FÂ±(x)]
+%     FM  --- |FÂ±(x)|
+%     FA  --- Arg[FÂ±(x)](Degs.)
+%     GR  --- Re[KÂ±(x)]
+%     GI  --- Im[KÂ±(x)]
+%     GM  --- |KÂ±(x)|
+%     GA  --- Arg[KÂ±(x)](Degs.)
 %     ======================================================
 srd= 57.29577951308233d0;
 eps=1.0d-15;

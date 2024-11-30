@@ -12,7 +12,7 @@ function mjyzo
 %       Purpose: This program computes the zeros of Bessel
 %                functions Jn(x), Yn(x), and their derivatives
 %                using subroutine JYZO
-%       Input :  n --- Order of Bessel functions(n ó 100)
+%       Input :  n --- Order of Bessel functions(n â‰¤ 100)
 %                NT --- Number of zeros
 %       Output:  RJ0(m)--- m-th zero of Jn(x),  m=1,2,...,NT
 %                RJ1(m)--- m-th zero of Jn'(x), m=1,2,...,NT
@@ -55,7 +55,7 @@ function [n,nt,rj0,rj1,ry0,ry1]=jyzo(n,nt,rj0,rj1,ry0,ry1,varargin);
 %       ======================================================
 %       Purpose: Compute the zeros of Bessel functions Jn(x),
 %                Yn(x), and their derivatives
-%       Input :  n  --- Order of Bessel functions(n ó 101)
+%       Input :  n  --- Order of Bessel functions(n â‰¤ 101)
 %                NT --- Number of zeros(roots)
 %       Output:  RJ0(L)--- L-th zero of Jn(x),  L=1,2,...,NT
 %                RJ1(L)--- L-th zero of Jn'(x), L=1,2,...,NT
